@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="bangmau.css">
     <link rel="stylesheet" href="ngực.css">
     <link rel="stylesheet" href="day.css">
+    <link rel="stylesheet" href="TạoVếu.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -21,9 +22,15 @@
     <!-- thêm vai cái chuc năng cho trang web nào-->
     <div class="more">
         <!-- hiện thị nhiều vếu -->
-        <article>
+        <article class="Tạo vếu">
             <h1>đây là nút của đàn ông</h1>
-            <img src="img/article/bóp.jpg" alt="ngực đấy bóp đi">
+            <button class="classic" onclick="Tạo()">Thêm vếu</button>
+
+            <map name="bop">
+                <area shape="circle" coords="20,20,80" alt="vắt sữa :V" onclick="Tạo()">
+            </map>
+            <script src="TạoVếu.js"></script>
+
         </article>
         <!-- thôi để mai làm -->
         <article id="ngực">
@@ -34,34 +41,35 @@
             <button id="right" onclick="che('khong')">không che</button>
             <div id="che"></div>
             <script src="ngực.js">
-            magnify("Vú Hàn", 2);
+                magnify("Vú Hàn", 2);
             </script>
         </article>
 
         <article class="day">
             <h1>Date() trả về ngày tháng</h1>
-            <button  title="ngay thang" onclick="day()">Date</button>
-            <p style="position: absolute;top: 20% ;left: 5%;color: blue;" id="d" >Ngày tháng ,giờ lúc này là:</p>            
-             <!--không thêm src bên trong tag script nếu ko code sẽ ko chạy--> 
+            <button title="ngay thang" onclick="day()">Date</button>
+            <p style="position: absolute;top: 20% ;left: 5%;color: blue;" id="d">Ngày tháng ,giờ lúc này là:</p>
+            <!--không thêm src bên trong tag script nếu ko code sẽ ko chạy-->
             <script>
-                function day(){
+                function day() {
                     document.getElementById("d").innerHTML = Date();
                 }
-            </script>            
+            </script>
         </article>
 
         <article class="X">
             <h1>Ân nút "X" Để ẩn ô này</h1>
             <!-- co the doi cach tat bằng sua onclick thanh tat() -->
-            <button  title="Nút tắt" onclick="this.parentNode.style.display='none'; "><i class="fa fa-window-close" style="font-size:48px;"></i></button>
+            <button title="Nút tắt" onclick="this.parentNode.style.display='none'; "><i class="fa fa-window-close"
+                    style="font-size:48px;"></i></button>
             <p id="demo"></p>
             <script src="buttonX.js"></script>
         </article>
 
         <article>
-            <h1> Chỏ chuột qua menu  </h1>
+            <h1> Chỏ chuột qua menu </h1>
             <menu>
-                <h2 hover >Menu ẩn</h2>
+                <h2 hover>Menu ẩn</h2>
                 <a href="https://www.youtube.com/watch?v=IcrbM1l_BoI">Wake me up</a>
                 <a href="https://www.youtube.com/watch?v=mWRsgZuwf_8"> Demon</a>
                 <a href="https://www.youtube.com/watch?v=LHCob76kigA">7 years</a>
@@ -72,13 +80,21 @@
         <article>
             <h1> Đổi màu trang web</h1>
             <div class="bang">
-                <button onclick="doimau('Đen')" style="font-size:24px" title="Chuyển sang màu đen" ><i class="fa fa-home" style="color: black;"></i>
-                <button onclick="doimau('Xanh')" style="font-size:24px" title="Chuyển sang màu xanh" ><i class="fa fa-home" style="color: blue;"></i>
-                <button onclick="doimau('Đỏ')" style="font-size:24px" title="Chuyển sang màu đỏ" ><i class="fa fa-home" style="color: red;"></i>
-                <button onclick="doimau('Lục')" style="font-size:24px" title="Chuyển sang xanh Lục" ><i class="fa fa-home" style="color: green;"></i>
-                <button onclick="doimau('Vàng')" style="font-size:24px" title="Chuyển sang vàng" ><i class="fa fa-home" style="color: yellow;"></i>
-                <button onclick="doimau('Cam')" style="font-size:24px" title="Chuyển sang cam" ><i class="fa fa-home" style="color: orange;"></i> 
-                <button onclick="doimau('Tím')" style="font-size:24px" title="Chuyển sang màu tím" ><i class="fa fa-home" style="color: purple;"></i>     
+                <button onclick="doimau('Đen')" style="font-size:24px" title="Chuyển sang màu đen"><i class="fa fa-home"
+                        style="color: black;"></i>
+                    <button onclick="doimau('Xanh')" style="font-size:24px" title="Chuyển sang màu xanh"><i
+                            class="fa fa-home" style="color: blue;"></i>
+                        <button onclick="doimau('Đỏ')" style="font-size:24px" title="Chuyển sang màu đỏ"><i
+                                class="fa fa-home" style="color: red;"></i>
+                            <button onclick="doimau('Lục')" style="font-size:24px" title="Chuyển sang xanh Lục"><i
+                                    class="fa fa-home" style="color: green;"></i>
+                                <button onclick="doimau('Vàng')" style="font-size:24px" title="Chuyển sang vàng"><i
+                                        class="fa fa-home" style="color: yellow;"></i>
+                                    <button onclick="doimau('Cam')" style="font-size:24px" title="Chuyển sang cam"><i
+                                            class="fa fa-home" style="color: orange;"></i>
+                                        <button onclick="doimau('Tím')" style="font-size:24px"
+                                            title="Chuyển sang màu tím"><i class="fa fa-home"
+                                                style="color: purple;"></i>
             </div>
             <script src="doimau.js"></script>
         </article>

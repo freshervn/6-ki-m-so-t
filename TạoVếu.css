@@ -1,0 +1,15 @@
+.Tạo {
+    background-image: url(img/article/bóp.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+}
+.Tạo img{
+    top: -60px;
+    width: 120%;
+    height: 120%;
+}
+.Tạo button{
+    
+}

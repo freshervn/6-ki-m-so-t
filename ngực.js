@@ -19,8 +19,6 @@ function magnify(imgID, zoom) {
     /*tạo cái soi div với clas img magnifier*/
     glass = document.createElement("DIV");
     glass.setAttribute("class", "img-magnifier-glass");
-
-    /*đưa cái soi vào*/
     img.parentElement.insertBefore(glass, img);
 
     /*tạo 1 cái với kich cỡ * zoom*/
