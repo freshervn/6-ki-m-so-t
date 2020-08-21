@@ -1,17 +1,16 @@
-#X button.X {
+.X button {
     position: absolute;
     top: 0;
     right: 0;
-    background-color: white;
     outline-color: none;
     border: none;
     font-family: Arial, Helvetica, sans-serif;
 }
- #X button i{
+ .X button i{
     color: red;
     opacity: 0.8;
 }
- #X button i:hover{
+ .X button i:hover{
     size: 50px;
     opacity: 1.0;
 }

@@ -1,3 +1,5 @@
-  function tat() {
+  function tat(e) {
     window.alert("Ô bạn ấn sẽ bị ẩn");
-    document.getElementById("X").style.display= "none"; }
+    e.parentNode.style.display='none'; 
+  }
+  

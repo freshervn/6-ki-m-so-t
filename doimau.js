@@ -22,5 +22,4 @@ function doimau(n) {
         default:
             document.getElementsByTagName("body")[0].style.background = "black";
     }
-
 }
