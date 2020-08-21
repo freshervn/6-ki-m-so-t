@@ -1,0 +1,34 @@
+menu{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: fit-content;    
+    display: flex;
+    flex-direction: column;
+}
+menu h2{
+    background-color:black;
+    color: white;
+    display: block;
+    padding: 8px;
+    margin: 0;
+}
+
+menu a{
+    display: none;
+    background-color: black;
+    padding: 8px;
+    text-decoration: none;
+}
+menu a:nth-child(even){
+    opacity: 0.9;
+}
+menu a:link{
+    color: black;
+}
+menu a:visited {
+    color: white;
+}
+menu:hover a{
+    display: block;
+}

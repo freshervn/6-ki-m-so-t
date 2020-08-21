@@ -5,12 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bùi Đạt CV</title>
     <link rel="icon" href="img/ImgTitle.png" type="image/x-icon?" />
-    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="body.css">
+    <link rel="stylesheet" href="more.css">
+    <link rel="stylesheet" href="X.css">
+    <link rel="stylesheet" href="Menu.css">
+    <link rel="stylesheet" href="bangmau.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 </head>
 
-<body>
+<body id="dy" class="dy">
+    <!-- thêm vai cái chuc năng cho trang web nào-->
+    <div class="more">
+        <article id="X">
+            <h1>Ân nút "X" Để ẩn ô này</h1>
+            <button class="X" title="Nút tắt" onclick="tat()"><i class="fa fa-window-close" style="font-size:48px;"></i></button>
+            <p id="demo"></p>
+            <script src="buttonX.js"></script>
+        </article>
+
+        <article>
+            <h1> Chỏ chuột qua menu  </h1>
+            <menu>
+                <h2 hover >Menu ẩn</h2>
+                <a href="https://www.youtube.com/watch?v=IcrbM1l_BoI">Wake me up</a>
+                <a href="https://www.youtube.com/watch?v=mWRsgZuwf_8"> Demon</a>
+                <a href="https://www.youtube.com/watch?v=LHCob76kigA">7 years</a>
+            </menu>
+
+        </article>
+
+        <article>
+            <h1> Đổi màu trang web</h1>
+            <div class="bang">
+                <button onclick="doimau('Đen')" style="font-size:24px" title="Chuyển sang màu đen" ><i class="fa fa-home" style="color: black;"></i>
+                <button onclick="doimau('Xanh')" style="font-size:24px" title="Chuyển sang màu xanh" ><i class="fa fa-home" style="color: blue;"></i>
+                <button onclick="doimau('Đỏ')" style="font-size:24px" title="Chuyển sang màu đỏ" ><i class="fa fa-home" style="color: red;"></i>
+                <button onclick="doimau('Lục')" style="font-size:24px" title="Chuyển sang xanh Lục" ><i class="fa fa-home" style="color: green;"></i>
+                <button onclick="doimau('Vàng')" style="font-size:24px" title="Chuyển sang vàng" ><i class="fa fa-home" style="color: yellow;"></i>
+                <button onclick="doimau('Cam')" style="font-size:24px" title="Chuyển sang cam" ><i class="fa fa-home" style="color: orange;"></i> 
+                <button onclick="doimau('Tím')" style="font-size:24px" title="Chuyển sang màu tím" ><i class="fa fa-home" style="color: purple;"></i>                    
+            </div>
+            <script src="doimau.js"></script>
+        </article>
+    </div>
+
     <div class="MyCV">
         <div class="basic">
             <div class="avatar">
@@ -47,21 +87,24 @@
             <h1>Mục tiêu Nghề Nghiệp</h1>
             <hr>
             <p>
-                Có mong muốn học tập đam mê môn lập trình. Em mong muốn được đi thực tập và làm việc tại môi trường thực tế. Để thích nghi với không gian làm viêc, quy trình tạo ra một sản phẩm thực.
+                Có mong muốn học tập đam mê môn lập trình. Em mong muốn được đi thực tập và làm việc tại môi trường thực
+                tế. Để thích nghi với không gian làm viêc, quy trình tạo ra một sản phẩm thực.
             </p>
         </section>
         <section>
             <h1>Mục tiêu Nghề Nghiệp</h1>
             <hr>
             <p>
-                Có mong muốn học tập đam mê môn lập trình. Em mong muốn được đi thực tập và làm việc tại môi trường thực tế. Để thích nghi với không gian làm viêc, quy trình tạo ra một sản phẩm thực.
+                Có mong muốn học tập đam mê môn lập trình. Em mong muốn được đi thực tập và làm việc tại môi trường thực
+                tế. Để thích nghi với không gian làm viêc, quy trình tạo ra một sản phẩm thực.
             </p>
         </section>
         <section>
             <h1>Mục tiêu Nghề Nghiệp</h1>
             <hr>
             <p>
-                Có mong muốn học tập đam mê môn lập trình. Em mong muốn được đi thực tập và làm việc tại môi trường thực tế. Để thích nghi với không gian làm viêc, quy trình tạo ra một sản phẩm thực.
+                Có mong muốn học tập đam mê môn lập trình. Em mong muốn được đi thực tập và làm việc tại môi trường thực
+                tế. Để thích nghi với không gian làm viêc, quy trình tạo ra một sản phẩm thực.
             </p>
         </section>
     </div>
