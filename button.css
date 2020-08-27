@@ -1,3 +1,19 @@
+.buttonblue{
+    background: blue;
+    opacity: 0.9;
+    border:none;
+    border-radius: 5px;
+    outline:none;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+}
+.buttonblue:hover
+{
+    opacity: 1.0;
+    color: red;
+}
 .X button {
     position: absolute;
     top: 0;

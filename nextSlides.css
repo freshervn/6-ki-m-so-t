@@ -1,0 +1,22 @@
+#nextSlide{
+    text-align: center;
+}
+ #nextSlide  div{   
+    background-color: blue;
+    width: 100%;
+    height: 60%;
+    position: relative;      
+    text-align: center;
+}
+#nextSlide .poster {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+ #nextSlide .nextSlide {
+    background-color: rgb(247, 247, 247);                
+    color: rgb(12, 14, 109);
+    font-size: 2vw;
+    outline: none;
+    border: none;
+}           
