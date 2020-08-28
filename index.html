@@ -31,25 +31,16 @@
 
     <!-- thêm vai cái chức năng cho trang web nào-->
     <!-- khu vuc sang tao :D -->
-    <div id="coding">
+
+    <div id="coding" >
+        <article id="testing">
         <h1>Khu vực sáng tạo</h1>
+        </article>
     </div>
 
     <button class="displaybar" id="visiblebar" onclick="visible()"><i class="fa fa-chevron-left"></i></button>
     <button class="displaybar" id="invisiblebar" style="display: none;right: 255px;" onclick="invisible()"><i
             class="fa fa-chevron-right"></i></button>
-    <script>
-        function visible() {
-            document.getElementById("done").style.width = "250px";
-            document.getElementById("visiblebar").style.display = "none";
-            document.getElementById("invisiblebar").style.display = "block";
-        }
-        function invisible() {
-            document.getElementById("done").style.width = "0px";
-            document.getElementById("visiblebar").style.display = "block";
-            document.getElementById("invisiblebar").style.display = "none";
-        }
-    </script>
 
     <aside id="done">
 
@@ -57,26 +48,26 @@
 
         <div id="sanPham"></div>
 
-        <article id="demo">
+        <article id="demo" ondblclick="pickarticle(this.id)">
             <p>an vao cai nay se phong to no trong cua so chinh</p>
             <h1>demo</h1>
         </article>
 
-        <article id="nextSlide"> 
+        <article id="nextSlide" ondblclick="pickarticle(this.id)">
             <h1>Next Sildes</h1>
             <div>
-            <img class="poster" src="img/article/Aquaman.jpg" alt="man">
-            <img class="poster" src="img/article/NowUSeeMe.jpg" alt="see">
-            <img class="poster" src="img/article/theGreatestShowman.jpg" alt="magic">
+                <img class="poster" src="img/article/Aquaman.jpg" alt="man">
+                <img class="poster" src="img/article/NowUSeeMe.jpg" alt="see">
+                <img class="poster" src="img/article/theGreatestShowman.jpg" alt="magic">
             </div>
-                <button onclick="smooth(-1)" class="nextSlide"> <i class="fa fa-arrow-left"></i></button>
-                <button onclick="smooth(1)" class="nextSlide"> <i class="fa fa-arrow-right"></i></button>
+            <button onclick="smooth(-1)" class="nextSlide"> <i class="fa fa-arrow-left"></i></button>
+            <button onclick="smooth(1)" class="nextSlide"> <i class="fa fa-arrow-right"></i></button>
             <script src="nextSlides.js">
             </script>
         </article>
 
         <!-- hiện thị nhiều vếu -->
-        <article class="Tạo vếu">
+        <article class="Tạo vếu" id="Tạo vếu" ondblclick="pickarticle(this.id)">
             <h1>Tìm nút của đàn ông đi</h1>
             <img src="img/article/bóp.jpg" alt="bóp đi" usemap="#bop">
             <map name="bop">
@@ -86,13 +77,13 @@
             <script src="TạoVếu.js"></script>
         </article>
 
-        <article class="di chuyển">
+        <article class="di chuyển" id="di chuyển" ondblclick="pickarticle(this.id)">
             <h1> Đưa article xuống cuối</h1>
             <button class="buttonblue" onclick="dichuyenEllement()">Đẩy xuống</button>
             <script src="Dichuyen.js"></script>
         </article>
 
-        <article class="day">
+        <article class="day" id="day" ondblclick="pickarticle(this.id)">
             <h1>Date() trả về ngày tháng</h1>
             <button class="buttonblue" title="ngay thang" onclick="day()">Date</button>
             <p style="position: absolute;top: 20% ;left: 5%;color: blue;" id="d">Ngày tháng ,giờ lúc này là:</p>
@@ -104,7 +95,7 @@
             </script>
         </article>
 
-        <article class="X">
+        <article class="X" id="X" ondblclick="pickarticle(this.id)">
             <h1>Ân nút "X" Để ẩn ô này</h1>
             <!-- co the doi cach tat bằng sua onclick thanh tat() -->
             <button title="Nút tắt" onclick="this.parentNode.style.display='none'; "><i class="fa fa-window-close"
@@ -113,7 +104,7 @@
             <script src="buttonX.js"></script>
         </article>
 
-        <article class="menu">
+        <article class="menu" id="menu" ondblclick="pickarticle(this.id)">
             <h1> Chỏ chuột qua menu </h1>
             <menu>
                 <h2 hover>Menu ẩn</h2>
@@ -124,7 +115,7 @@
 
         </article>
 
-        <article>
+        <article id="doimau" ondblclick="pickarticle(this.id)">
             <h1> Đổi màu trang web</h1>
             <div class="bang">
                 <button onclick="doimau('Đen')" style="font-size:24px" title="Chuyển sang màu đen"><i class="fa fa-home"
@@ -145,11 +136,10 @@
             </div>
             <script src="doimau.js"></script>
         </article>
-
-        <script src="done.js"></script>
-        </div>
     </aside>
-
+    <script src="done.js"></script>
+    </div>
+    <script src="body.js"></script>
 </body>
 
 </html>
