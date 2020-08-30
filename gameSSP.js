@@ -37,8 +37,8 @@ function SetupGame() {
 
     // tao but tuong tac
     document.getElementById("ScissorsChoice").addEventListener("click", function () { this.setAttribute("style","opacity:1;transform: scale(1.2,1.2);border:2px solid yellow ") ;choice(this.id)  });
-    document.getElementById("StoneChoice").addEventListener("click", function () { this.setAttribute("style","opacity:1;transform: scale(1.2,1.2);");choice(this.id) });
-    document.getElementById("PaperChoice").addEventListener("click", function () { this.setAttribute("style","opacity:1;transform: scale(1.2,1.2);");choice(this.id) });
+    document.getElementById("StoneChoice").addEventListener("click", function () { this.setAttribute("style","opacity:1;transform: scale(1.2,1.2);border:2px solid yellow");choice(this.id) });
+    document.getElementById("PaperChoice").addEventListener("click", function () { this.setAttribute("style","opacity:1;transform: scale(1.2,1.2);border:2px solid yellow");choice(this.id) });
 }
 SetupGame();
 
