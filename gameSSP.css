@@ -1,0 +1,59 @@
+#KeoBuaBao {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-image: url("img/article/gamebackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.timing {
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    top: 10%;
+    display: none;
+    animation-name: zoomin;
+    animation-duration: 1s;
+}
+
+@keyframes zoomin {
+    from {
+        transform: scale(1, 1);
+    }
+
+    to {
+        transform: scale(0, 0);
+    }
+}
+
+#startGameSSP {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    background-color: green;
+    border-radius: 8px;
+    font-size: 3vw;
+
+}
+
+#startGameSSP:hover {
+    background-color: red;
+}
+
+#Choice {
+    position: absolute;
+    top: 65%;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    display: none;
+}
+
+.playerChoice {
+    width: 25%;
+    height: 100%;
+}

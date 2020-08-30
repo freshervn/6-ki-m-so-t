@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="DiChuyen.css">
     <link rel="stylesheet" href="done.css">
     <link rel="stylesheet" href="nextSlides.css">
+    <link rel="stylesheet" href="gameSSP.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -35,67 +36,6 @@
     <!-- khu vuc sang tao :D -->
 
     <div id="coding">
-        <style>
-            #KeoBuaBao {
-                margin: 0;
-                text-align: center;
-                width: 100%;
-                height: 100%;
-                background-image: url("img/article/gamebackground.jpg");
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
-            }
-
-            .timing {
-                width: 50%;
-                position: absolute;
-                left: 25%;
-                top: 10%;
-                display: none;
-                animation-name: zoomin;
-                animation-duration: 1s;
-            }
-
-            @keyframes zoomin {
-                from {
-                    transform: scale(1, 1);
-                }
-
-                to {
-                    transform: scale(0, 0);
-                }
-            }
-
-            #startGameSSP {
-                position: absolute;
-                top: 40%;
-                left: 40%;
-                background-color: green;
-                border-radius: 8px;
-                font-size: 3vw;
-
-            }
-
-            #startGameSSP:hover {
-                background-color: red;
-            }
-
-            #Choice {
-                position: absolute;
-                top: 65%;
-                width: 100%;
-                height: 30%;
-                display: flex;
-                justify-content: space-around;
-                display: none;
-            }
-
-            .playerChoice {
-                width: 25%;
-                height: 100%;
-            }
-        </style>
         <article id="KeoBuaBao">
 
             <h1 id="h1KeoBuaBao"> Kéo đá giấy </h1>
@@ -107,99 +47,9 @@
                 <img src="img/article/stone.jpg" class="playerChoice" id="StoneChoice"></img>
                 <img src="img/article/paper.jpg" class="playerChoice" id="PaperChoice"></img>
             </div>
-
+            <script src="gameSSP.js"></script>
         </article>
-        </article>
-        <script>
-            SetupGame()
-            var winner;
-            document.getElementById("startGameSSP").addEventListener("click", Timing);
-            document.getElementById("startGameSSP").addEventListener("click", hidebutton);
-            function hidebutton() {
-                document.getElementById("h1KeoBuaBao").style.display = "none";
-                document.getElementById("startGameSSP").style.display = "none";
-                document.getElementById("Choice").style.display = "flex";
-                setTimeout(function(){ alert(winner)},3000);
-            }
-
-            
-            function choice(c) {
-                //may chon
-                var computerChoice = (Math.floor(Math.random() * (4 - 1)) + 1);
-                var humanChoice;
-
-                switch (c) {
-                    case "ScissorsChoice": humanChoice = 1; break;
-                    case "StoneChoice": humanChoice = 2; break;
-                    case "PaperChoice": humanChoice = 3; break;
-                }
-                
-
-                // bua thang keo 2-1=1;
-                // bua thua giay 2-3=-1;
-
-                // giay thang bua 3-2=1;
-                // giay thua keo 3-1=2;
-
-                // keo thang giay 1-3=-2;
-                // keo thua bua  1-2=-1;
-                // hoa=0;
-                
-                switch (humanChoice-computerChoice) {
-                    case 0: winner ="Hòa";
-                    break;
-                    case 1: winner = "người thắng";
-                    break;
-                    case 2: winner = "máy thắng";
-                    break;
-                    case -2: winner = "người thắng";
-                    break;
-                    case -1: winner ="máy thắng";
-                    break;
-                }
-            }
-
-            function SetupGame() {
-                //tinh thoi gian                      
-                // tạo ảnh có sẵn                      
-                for (let i = 0; i < 4; i++) {
-                    let j = document.createElement("img");
-                    document.getElementById("KeoBuaBao").appendChild(j);
-                    // tao anh co san voi kich thuoc lon                    
-                    j.setAttribute("class", "timing");
-                }
-                imgTiming = document.getElementsByClassName("timing");
-                imgTiming[0].setAttribute("src", "img/article/0.png");
-                imgTiming[1].setAttribute("src", "img/article/1.jpg");
-                imgTiming[2].setAttribute("src", "img/article/2.jpg");
-                imgTiming[3].setAttribute("src", "img/article/3.jpg");
-                // tao but tuong tac
-
-                document.getElementById("ScissorsChoice").addEventListener("click", function () { choice(this.id) });
-                document.getElementById("StoneChoice").addEventListener("click", function () { choice(this.id) });
-                document.getElementById("PaperChoice").addEventListener("click", function () { choice(this.id) });
-            }
-            // cac anh van la none sau khi set up  
-
-
-            function bienmat(j) {
-                imgTiming[j].style.display = "none";
-            }
-
-            function displayTime(j) {
-                imgTiming[j].style.display = "block";
-                setTimeout(bienmat, 1000, j);
-            }
-            function Timing() {
-                for (let i = imgTiming.length - 1; i >= 0; i--) {
-                    //chieu het cac anh
-                    setTimeout(displayTime, (imgTiming.length - i - 1) * 1000, i);
-                }
-            }
-
-             // an nut play khi timming va hie nut chon;
-
-        </script>
+        
     </div>
 
     <button class="displaybar" id="visiblebar" onclick="visible()"><i class="fa fa-chevron-left"></i></button>
