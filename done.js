@@ -1,10 +1,10 @@
-let i=document.getElementById("bubble").children[0]; 
-function st(){
-    i.className="rightrotate";
+let i2=document.getElementById("bubble").children[0]; 
+function setupBubbleHead(){
+    i2.className="rightrotate";
 }                      
 function lac_lac(){                
-    if (i.className=="leftrotate"){
-        i.className="rightrotate"
+    if (i2.className=="leftrotate"){
+        i2.className="rightrotate"
     }
-    else i.className="leftrotate";
+    else i2.className="leftrotate";
 }

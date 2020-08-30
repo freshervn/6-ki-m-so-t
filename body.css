@@ -54,7 +54,7 @@ header h2{
 }
 .displaybar {
     font-size:60px;
-    background-color: black;
+    background-color:black ;
      border: none; 
      outline:none; 
      position: fixed;
@@ -65,8 +65,4 @@ header h2{
 .displaybar i{
   background-color: black;
   color: white; 
-}
-.fa fa-chevron-left{
-  background-color: black;
-  color: white;
 }

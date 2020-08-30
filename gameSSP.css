@@ -56,4 +56,11 @@
 .playerChoice {
     width: 25%;
     height: 100%;
+    opacity: .8;
 }
+.playerChoice:hover{
+    opacity: 1;
+    transform: scale(1.2,1.2);
+}
+
+
