@@ -98,15 +98,15 @@ function choice(c) {
     // hoa=0;
     
     switch (humanChoice-computerChoice) {
-        case 0: winner ="Hòa";
+        case 0: winner ="Tớ Thích Cậu";
         break;
-        case 1: winner = "người thắng";
+        case 1: winner = "Cậu Biết Là Cậu rất rất rất... đáng yêu chứ";
         break;
-        case 2: winner = "máy thắng";
+        case 2: winner = " Cậu có thích làm chuyện ấy trong những chỗ kín náo nhiệt không ^^ ";
         break;
-        case -2: winner = "người thắng";
+        case -2: winner = " Nếu mà trên thế giới chỉ có 2 đứa thì bọn mình nhân giống loài người nhá ><";
         break;
-        case -1: winner ="máy thắng";
+        case -1: winner =" Tớ biến thái thật,nhưng tình cảm nghiêm túc ^^ chân thành thích cậu";
         break;
     }
 }
