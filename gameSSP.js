@@ -100,13 +100,21 @@ function choice(c) {
     switch (humanChoice-computerChoice) {
         case -2: winner = " Nếu mà trên thế giới chỉ có 2 đứa thì bọn mình nhân giống loài người nhá ><";
         break;
-        case 0: winner ="Tớ Thích Cậu";
+        case 0:
+             switch (Math.floor(Math.random() * (4 - 1)) + 1){
+                case 1:winner ="Tớ Thích Cậu";
+                break;
+                case 2:winner ="Cũng Thích Cậu, nhưng nhiều hơn";
+                break;
+                case 3:winner ="<3";
+                break;
+             }
+             
         break;
         case 1: winner = "Cậu Biết Là Cậu rất rất rất... đáng yêu chứ";
         break;
         case 2: winner = " Cậu có thích làm chuyện ấy trong những chỗ kín náo nhiệt không ^^ ";
         break;
-        
         case -1: winner =" Tớ biến thái thật,nhưng tình cảm nghiêm túc ^^ chân thành thích cậu";
         break;
     }
