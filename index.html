@@ -24,18 +24,116 @@
         <h2>Bùi Thành Đạt ( Hire me, please! )</h2>
         <h2></h2>
         <div class="rightside">
-            <button><i class="fa fa-facebook"></i></button>
-            <button><i class="fa fa-phone"></i></button>
+            <button onclick="window.location.href='https://www.facebook.com/';" href="https://www.facebook.com/"><i
+                    class="fa fa-facebook"></i></button>
+            <button onclick="alert('Số điện thoại của mình là: 0335950936')"><i class="fa fa-phone"></i></button>
         </div>
+
     </header>
 
     <!-- thêm vai cái chức năng cho trang web nào-->
     <!-- khu vuc sang tao :D -->
 
-    <div id="coding" >
-        <article id="testing">
-        <h1>Khu vực sáng tạo</h1>
+    <div id="coding">
+        <style>
+            #KeoBuaBao {
+                margin: 0;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                background-image: url("img/article/gamebackground.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+            #keoBuaBao .timing{
+                width: 50%;
+                position: absolute;
+                left: 25%;
+                top: 10%;
+                display: none;
+                transition-duration: 1s;
+            }
+            #keoBuaBao .big {
+                transform: scale(0, 0);
+                display: none;
+            }
+            #startGameSSP{                
+                position: absolute;
+                top: 40%;
+                left: 40%;
+                background-color: green;
+                border-radius: 8px;
+                font-size: 3vw;
+                
+            }
+            #startGameSSP:hover{
+                background-color: red;
+            }
+            #Choice{
+                width: 100%;
+                height: 30%; 
+                display: flex;
+                justify-content: space-around;
+                position: absolute;
+                top:65%;
+            }
+            .playerChoice{
+                width: 25%;
+                height: 100%;
+                display: none;                
+            }
+        </style>
+        <article id="KeoBuaBao">
+            <h1 id="h1KeoBuaBao"> Game: kéo đá giấy </h1>
+            <button id="startGameSSP" >Start</button>
+            <div id="Choice">
+            <img src="img/article/scissors.jpg"  class="playerChoice" id="ScissorsChoice" ></img>
+            <img src="img/article/stone.jpg" class="playerChoice" id="StoneChoice" ></img>
+            <img src="img/article/paper.jpg" class="playerChoice" id="PaperChoice" ></img>
+            </div>
+            </article>
         </article>
+        <script>
+           
+            function SetupTiming() {     
+                //them tuong tac cho button
+                document.getElementById("startGameSSP").addEventListener("click",Timing);
+                // xoa tieu de
+                
+                for (let i = 0; i < 4; i++) {
+                    let j = document.createElement("img");
+
+                    document.getElementById("KeoBuaBao").appendChild(j);
+                    j.setAttribute("class", "timing");
+                }
+                imgTiming = document.getElementsByClassName("timing");
+                imgTiming[0].setAttribute("src", "img/article/0.png");
+                imgTiming[1].setAttribute("src", "img/article/1.jpg");
+                imgTiming[2].setAttribute("src", "img/article/2.jpg");
+                imgTiming[3].setAttribute("src", "img/article/3.jpg");
+            }
+            // chieu 1 cai
+            function displayTime(i) {
+                imgTiming[i].setAttribute("class", "big");
+            }
+
+            function Timing() {
+                for( let i=0;i<document.getElementsByClassName("playerChoice").length;i++)
+                {
+                    document.getElementsByClassName("playerChoice")[i].style.display="block";
+                }
+                document.getElementById("h1KeoBuaBao").style.display="none";
+                for (let i = imgTiming.length - 1; i >= 0; i--) {
+                    for (let j = imgTiming.length - 1; j >= 0; j--) {
+                        imgTiming[j].style.display = "block";
+                        imgTiming[j].setAttribute("class","timing");
+                    }
+                    setTimeout(displayTime, 1000 + (imgTiming.length - i - 1) * 1000, i);
+                }
+            }
+            SetupTiming();
+        </script>
     </div>
 
     <button class="displaybar" id="visiblebar" onclick="visible()"><i class="fa fa-chevron-left"></i></button>
@@ -48,12 +146,16 @@
 
         <div id="sanPham"></div>
 
-        <article id="demo" ondblclick="pickarticle(this.id)">
+        <article id="bubble">
+            <img src="img\article\historia.jpg" onmouseover="st()" class="leftrotate" ontransitionend="lac_lac()">
+        </article>
+
+        <article id="demo">
             <p>an vao cai nay se phong to no trong cua so chinh</p>
             <h1>demo</h1>
         </article>
 
-        <article id="nextSlide" ondblclick="pickarticle(this.id)">
+        <article id="nextSlide">
             <h1>Next Sildes</h1>
             <div>
                 <img class="poster" src="img/article/Aquaman.jpg" alt="man">
@@ -67,7 +169,7 @@
         </article>
 
         <!-- hiện thị nhiều vếu -->
-        <article class="Tạo vếu" id="Tạo vếu" ondblclick="pickarticle(this.id)">
+        <article class="Tạo vếu" id="Tạo vếu">
             <h1>Tìm nút của đàn ông đi</h1>
             <img src="img/article/bóp.jpg" alt="bóp đi" usemap="#bop">
             <map name="bop">
@@ -77,13 +179,13 @@
             <script src="TạoVếu.js"></script>
         </article>
 
-        <article class="di chuyển" id="di chuyển" ondblclick="pickarticle(this.id)">
+        <article class="di chuyển" id="di chuyển">
             <h1> Đưa article xuống cuối</h1>
             <button class="buttonblue" onclick="dichuyenEllement()">Đẩy xuống</button>
             <script src="Dichuyen.js"></script>
         </article>
 
-        <article class="day" id="day" ondblclick="pickarticle(this.id)">
+        <article class="day" id="day">
             <h1>Date() trả về ngày tháng</h1>
             <button class="buttonblue" title="ngay thang" onclick="day()">Date</button>
             <p style="position: absolute;top: 20% ;left: 5%;color: blue;" id="d">Ngày tháng ,giờ lúc này là:</p>
@@ -95,7 +197,7 @@
             </script>
         </article>
 
-        <article class="X" id="X" ondblclick="pickarticle(this.id)">
+        <article class="X" id="X">
             <h1>Ân nút "X" Để ẩn ô này</h1>
             <!-- co the doi cach tat bằng sua onclick thanh tat() -->
             <button title="Nút tắt" onclick="this.parentNode.style.display='none'; "><i class="fa fa-window-close"
@@ -104,7 +206,7 @@
             <script src="buttonX.js"></script>
         </article>
 
-        <article class="menu" id="menu" ondblclick="pickarticle(this.id)">
+        <article class="menu" id="menu">
             <h1> Chỏ chuột qua menu </h1>
             <menu>
                 <h2 hover>Menu ẩn</h2>
@@ -115,7 +217,7 @@
 
         </article>
 
-        <article id="doimau" ondblclick="pickarticle(this.id)">
+        <article id="doimau">
             <h1> Đổi màu trang web</h1>
             <div class="bang">
                 <button onclick="doimau('Đen')" style="font-size:24px" title="Chuyển sang màu đen"><i class="fa fa-home"

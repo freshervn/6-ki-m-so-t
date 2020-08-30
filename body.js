@@ -10,24 +10,38 @@ function invisible() {
   document.getElementById("invisiblebar").style.display = "none";
 }
 //phóng to cac article in to big windonw
+listArtitcle = document.getElementsByTagName("article");
+for (let i = 0; i < listArtitcle.length; i++) {
+  listArtitcle[i].addEventListener("dblclick", function () { pickarticle(this.id) });
+}
+
 function pickarticle(i) {
 
   // lay id cua cai an
-  var ar=document.getElementById(i);
-  
-  //lay toa do cua cua so nay
-  var mainArticle =document.getElementById("coding");
+  var ar = document.getElementById(i);
+
+  //lay toa do cua cua so trinh chieu
+  var mainArticle = document.getElementById("coding");
 
   //lay id cua cai ben trong coding
-  var arm=mainArticle.children[0];
-  
-  //lay toa do cua article 
-  var asideArticle =document.getElementById("done");
 
-  //day cai artil vao demo
-  asideArticle.insertAdjacentElement("beforeend",arm);
+  //kiem tra xem coding co black ko
+  if (mainArticle.children.length == 0) {
 
-  mainArticle.insertAdjacentElement("beforeend",ar);
+    mainArticle.insertAdjacentElement("beforeend", ar);
+    ar.setAttribute("style", "height:100%,width:100%");
+  }
+  else{
+    var arm = mainArticle.children[0];
+    //lay toa do cua article 
+    var asideArticle = document.getElementById("done");  
+    //day cai artil dang co vao demo
+    asideArticle.insertAdjacentElement("beforeend", arm);  
+    // lay cai aticle tu demo ra
+    mainArticle.insertAdjacentElement("beforeend", ar);  
+    ar.setAttribute("style", "height:100%,width:100%");
+  }
 
-  ar.setAttribute("style","height:100%,width:100%");
+ 
+
 }
