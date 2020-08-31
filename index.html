@@ -36,6 +36,19 @@
     <!-- khu vuc sang tao :D -->
 
     <div id="coding">
+     
+        
+    </div>
+
+    <button class="displaybar" id="visiblebar" onclick="visible()"><i class="fa fa-chevron-left"></i></button>
+    <button class="displaybar" id="invisiblebar" style="display: none;right: 255px;" onclick="invisible()"><i
+            class="fa fa-chevron-right"></i></button>
+
+    <aside id="done">
+
+        <h1> Sản phẩm( ấn 2 lần để phóng to nhá) </h1>
+        <div id="sanPham"></div>
+
         <article id="KeoBuaBao">
             <style>
                 
@@ -46,17 +59,6 @@
             </div>
             <script src="gameSSP.js"></script>            
         </article>
-        
-    </div>
-
-    <button class="displaybar" id="visiblebar" onclick="visible()"><i class="fa fa-chevron-left"></i></button>
-    <button class="displaybar" id="invisiblebar" style="display: none;right: 255px;" onclick="invisible()"><i
-            class="fa fa-chevron-right"></i></button>
-
-    <aside id="done">
-
-        <h1> Sản phẩm </h1>
-        <div id="sanPham"></div>
 
         <article id="bubble">
             <img src="img\article\historia.jpg" onmouseover="setupBubbleHead()" class="leftrotate" ontransitionend="lac_lac()">
