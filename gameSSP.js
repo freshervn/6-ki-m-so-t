@@ -5,8 +5,21 @@ var stopTiming;
 // timming để chạy bộ đếm giờ
 // choice sử lý kết quả game
 // replaySSP khởi động lại game
-
 //thiếu dừng game khi người choi đã chọn;
+
+// bug ? không xóa được ảnh showcomputerchoice and human choice do tạo thừa ảnh
+// không repay được :))
+
+// trình tự code
+//  SetupGame()
+//  click vào nút thì bắt đầy chạy timing,hidebutton
+//  timing thì tính giờ oke.
+//  hidebutton thì xóa bớt các cái có trên màn hình đi, và hiển thị lựa chọn
+//  hiện thị ra 3 ảnh
+//  1.không ấn chạy bth
+//  2.click chạy hỏng.
+//   choice chay oke roi
+// lap lai nut oke nua thoi
 
 function SetupGame() {
     //them tuong tac voi start button
@@ -23,13 +36,14 @@ function SetupGame() {
         document.getElementById("Choice").style.display = "flex";
     }
 
-    // nut ket qua
-    var buttonOk=document.createElement("button");    
+    // nut ket qua oke
+    var buttonOk = document.createElement("button");
     document.getElementById("KeoBuaBao").appendChild(buttonOk);
-    buttonOk.setAttribute("id","buttonOkeSSP");    
-    buttonOk.innerHTML= "Oke";
-    buttonOk.addEventListener("click",replaySSP);
-    //tinh thoi gian                          
+    buttonOk.setAttribute("id", "buttonOkeSSP");
+    buttonOk.innerHTML = "Oke";
+    buttonOk.addEventListener("click", replaySSP);
+
+    //tinh thoi gian  oke                            
     // tạo ảnh có sẵn                      
     for (let i = 0; i < 4; i++) {
         let j = document.createElement("img");
@@ -43,7 +57,7 @@ function SetupGame() {
     imgTiming[2].setAttribute("src", "img/article/2.jpg");
     imgTiming[3].setAttribute("src", "img/article/3.jpg");
 
-    //tao an chon
+    //tạo ảnh lựa chọn "búa kéo bảo"
     for (let i = 0; i < 3; i++) {
         let j = document.createElement("img");
         document.getElementById("Choice").appendChild(j);
@@ -62,7 +76,7 @@ function SetupGame() {
     imgGameChoice[2].setAttribute("id", "PaperChoice");
     imgGameChoice[2].setAttribute("class", "playerChoice");
 
-    // tao but tuong tac
+    // thêm iệu ứng hover và khi click thì sử lý lua chon cua nguoi choi
     document.getElementById("ScissorsChoice").addEventListener("click", function () { this.setAttribute("style", "opacity:1;transform: scale(1.2,1.2);border: 2px solid yellow;"); choice(this.id) });
     document.getElementById("StoneChoice").addEventListener("click", function () { this.setAttribute("style", "opacity:1;transform: scale(1.2,1.2);border: 2px solid yellow;"); choice(this.id) });
     document.getElementById("PaperChoice").addEventListener("click", function () { this.setAttribute("style", "opacity:1;transform: scale(1.2,1.2);border: 2px solid yellow;"); choice(this.id) });
@@ -90,36 +104,73 @@ function Timing() {
 
 // khởi động lại ảnh sau khi timming
 function replaySSP() {
+
+    // đưa các lựa chọn về bth trước khi được click
     for (let i = 0; i < document.querySelectorAll(".playerChoice").length; i++) {
         // neu dung style "" thi gia tri tra ve mac dinh ban dau
         document.querySelectorAll(".playerChoice")[i].setAttribute("style", "");
     }
+    // đổi nút start thành tiếp tục
     document.getElementById("startGameSSP").innerHTML = "Tiếp tục";
+    //ẩn nút "tiếp tục" đi
     document.getElementById("startGameSSP").style.display = "block";
-    document.getElementById("Choice").style.display = "none";
+    // ẩn mấy cái lựa chọn 
+    document.getElementById("Choice").setAttribute("style", "display:none");
+
+    //hiển thị lại tên game
     document.getElementById("h1KeoBuaBao").style.display = "";
 
-    document.getElementById("buttonOkeSSP").remove();
-    document.getElementById("showComputerChoice").remove();
-}
-function displayHumanAndComputerChoice(i,k) {
+    // ẩn nút "oke" 
+    document.getElementById("buttonOkeSSP").setAttribute("style", "display:none");
 
-    let j = document.createElement("img");
+    // xóa nốt 2 cái ảnh kết quả
+    document.getElementById("showComputerChoice").remove();
+    document.getElementById("showHumanChoice").remove();
+    document.getElementById("humanh2").remove();
+    document.getElementById("computerh2").remove();
+    document.getElementById("result").remove();
+}
+
+// in kết quả game
+function displayHumanAndComputerChoice(human, computer,result) {
+
+    //tạo thêm 2 cái tiêu đề nhìn cho rõ
+
+    hh = document.createElement("h2");
+    document.getElementById("KeoBuaBao").appendChild(hh);
+    hh.setAttribute("id", "humanh2");
+    hh.innerHTML = "NGƯỜI CHỌN";
+
+    hc = document.createElement("h2");
+    document.getElementById("KeoBuaBao").appendChild(hc);
+    hc.setAttribute("id", "computerh2");
+    hc.innerHTML = "MÁY CHỌN";
+
+    kq = document.createElement("h2");
+    document.getElementById("KeoBuaBao").appendChild(kq);
+    kq.setAttribute("id", "result");
+    kq.innerHTML = result;
+
+    j = document.createElement("img");
     document.getElementById("KeoBuaBao").appendChild(j);
-    j.setAttribute("id", "showComputerChoice");
-    switch (i) {
+    j.setAttribute("id", "showHumanChoice");
+
+    switch (human) {
         case 1: j.setAttribute("src", "img/article/scissors.jpg");
             break;
         case 2: j.setAttribute("src", "img/article/stone.jpg");
             break;
         case 3: j.setAttribute("src", "img/article/paper.jpg");
-            break;            
+            break;
     }
 
     l = document.createElement("img");
+
     document.getElementById("KeoBuaBao").appendChild(l);
-    l.setAttribute("id", "showHumanChoice");
-    switch (k) {
+
+    l.setAttribute("id", "showComputerChoice");
+
+    switch (computer) {
         case 1: l.setAttribute("src", "img/article/scissors.jpg");
             break;
         case 2: l.setAttribute("src", "img/article/stone.jpg");
@@ -127,87 +178,71 @@ function displayHumanAndComputerChoice(i,k) {
         case 3: l.setAttribute("src", "img/article/paper.jpg");
             break;
     }
-    document.getElementById("buttonOkeSSP").setAttribute("style","display:block");
+    document.getElementById("buttonOkeSSP").style.display = "block";
+    document.getElementById("Choice").setAttribute("style", "display:none");
 }
+
 // sử lý kết quả game khi người bấm
-function choice(c) {
-    //may chon    
+
+function choice(idimg) {
+    //may chon random
     var computerChoice = (Math.floor(Math.random() * (4 - 1)) + 1);
     var humanChoice;
+    var result;
 
-    switch (c) {
+    switch (idimg) {
         case "ScissorsChoice": humanChoice = 1; break;
         case "StoneChoice": humanChoice = 2; break;
         case "PaperChoice": humanChoice = 3; break;
     }
 
-    // bua thang keo 2-1=1;
-    // bua thua giay 2-3=-1;
-
-    // giay thang bua 3-2=1;
-    // giay thua keo 3-1=2;
-
-    // keo thang giay 1-3=-2;
-    // keo thua bua  1-2=-1;
-    // hoa=0;
-    //code nay tam de day    
-    // switch (humanChoice-computerChoice) {
-    //     case -2: winner ="Chúc mừng bạn thắng rồi" // " Nếu mà trên thế giới chỉ có 2 đứa thì bọn mình nhân giống loài người nhá ><";
-    //     break;
-    //     case 0: winner="Hòa nhé";
-    //         //  switch (Math.floor(Math.random() * (4 - 1)) + 1){
-    //         //     case 1:winner ="Tớ Thích Cậu";
-    //         //     break;
-    //         //     case 2:winner ="Cũng Thích Cậu, nhưng nhiều hơn";
-    //         //     break;
-    //         //     case 3:winner ="<3";
-    //         //     break;
-    //         //  }
-
-    //     break;
-    //     case 1: winner ="Chúc mừng bạn thắng rồi"// "Cậu Biết Là Cậu rất rất rất... đáng yêu chứ";
-    //     break;
-    //     case 2: winner ="Máy đã Thắng bạn"// " Cậu có thích làm chuyện ấy trong những chỗ kín náo nhiệt không ^^ ";
-    //     break;
-    //     case -1: winner ="Máy đã Thắng bạn"//" Tớ biến thái thật,nhưng tình cảm nghiêm túc ^^ chân thành thích cậu";
-    //     break;
-    //}
-    
-    
+    //đang lỗi ở đây
     switch (humanChoice) {
         // kéo 
         case 1:
             switch (computerChoice) {
-                case 1: displayHumanAndComputerChoice(1,1);                                
+                case 1: result = "HÒA";
+                    displayHumanAndComputerChoice(1, 1,result);
                     break;
-                case 2: displayHumanAndComputerChoice(1,2);  
+                case 2: result = "THUA";
+                    displayHumanAndComputerChoice(1, 2,result);
                     break;
-                case 3: displayHumanAndComputerChoice(1,3);  
+                case 3: result = "THẮNG";
+                    displayHumanAndComputerChoice(1, 3,result);
                     break;
-            }
+            } break;
         // đá    
         case 2:
             switch (computerChoice) {
-                case 1: displayHumanAndComputerChoice(2,1);  
+                case 1:
+                    result = "THẮNG";
+                    displayHumanAndComputerChoice(2, 1,result);
                     break;
-                case 2: displayHumanAndComputerChoice(2,2);  
+                case 2: result = "HÒA";
+                    displayHumanAndComputerChoice(2, 2,result);
                     break;
-                case 3: displayHumanAndComputerChoice(2,3);  
+                case 3:
+                    result = "THUA";
+                    displayHumanAndComputerChoice(2, 3,result);
                     break;
-            }
+            }break;
         // giấy    
         case 3:
             switch (computerChoice) {
-                case 1: displayHumanAndComputerChoice(3,1);  
+                case 1:
+                    result = "THUA"; 
+                    displayHumanAndComputerChoice(3, 1,result);
                     break;
-                case 2: displayHumanAndComputerChoice(3,2);  
+                case 2: result = "THẮNG";
+                    displayHumanAndComputerChoice(3, 2,result);
                     break;
-                case 3: displayHumanAndComputerChoice(3,3);  
+                case 3: result = "HÒA";
+                    displayHumanAndComputerChoice(3, 3,result);
                     break;
-            }
-    break;
+            }break;
     }
     // dừng timming
+    //đang bug chỗ này 1 ít
     clearTimeout(stopTiming3);
     clearTimeout(stopTiming2);
     clearTimeout(stopTiming1);

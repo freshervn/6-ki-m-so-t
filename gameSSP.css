@@ -91,7 +91,27 @@
 #buttonOkeSSP:hover {
     background-color: blue;
 }
-
-
-
-
+#computerh2{
+    position: absolute;
+    top:0.5%;
+    left: 5%;
+    font-size: 100%;
+    color: red;
+}
+#humanh2{
+    position: absolute;
+    top:1%;
+    right: 5%;
+    font-size: 100%;
+    color: blue;
+}
+#result{
+    position: absolute;
+    top: 70%;
+    left: 36%;
+    font-size: 200%;
+    color: yellow;
+    background-color: purple;
+    padding: 4px;
+    border: 3px solid green;
+}
