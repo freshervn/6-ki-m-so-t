@@ -1,11 +1,23 @@
 // 2 nut hien thi aside
 function visible() {
+  document.getElementById("sourceCode").style.width = "400px";
+  document.getElementById("sourceCode").style.height = "400px";
+  document.getElementById("coding").style.width = "400px";
+  document.getElementById("coding").style.height = "400px";
+
   document.getElementById("done").style.width = "250px";
+  document.getElementById("ViewCode").style.width = document.getElementById("ViewCode").offsetWidth -250+"px";
   document.getElementById("visiblebar").style.display = "none";
   document.getElementById("invisiblebar").style.display = "block";
 }
 function invisible() {
-  document.getElementById("done").style.width = "0px";
+  document.getElementById("sourceCode").style.width = "";
+  document.getElementById("coding").style.width = "";
+  document.getElementById("sourceCode").style.height = "";
+  document.getElementById("coding").style.height = "";
+
+  document.getElementById("done").style.width = "0px";  
+  document.getElementById("ViewCode").style.width = " 100% ";
   document.getElementById("visiblebar").style.display = "block";
   document.getElementById("invisiblebar").style.display = "none";
 }
@@ -25,9 +37,8 @@ function pickarticle(i) {
 
   //lay id cua cai ben trong coding
 
-  //kiem tra xem coding co black ko
+  //kiem tra xem coding co trong ko
   if (mainArticle.children.length == 0) {
-
     mainArticle.insertAdjacentElement("beforeend", ar);
     ar.setAttribute("style", "height:100%,width:100%");
   }

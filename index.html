@@ -25,22 +25,58 @@
         <h2>Bùi Thành Đạt ( Hire me, please! )</h2>
         <h2></h2>
         <div class="rightside">
-            <button onclick="window.location.href='https://www.facebook.com/';" href="https://www.facebook.com/"><i
-                    class="fa fa-facebook"></i></button>
+            <button onclick="window.location.href='https://www.facebook.com/';" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></button>
             <button onclick="alert('Số điện thoại của mình là: 0335950936')"><i class="fa fa-phone"></i></button>
+            <style>
+                #viewCodeBT{
+                    
+                    font-size: 2vw;
+                    border-radius: 8px;
+                }
+                /* nen them chuc nang gi nhi */
+            </style>
+            <button id="viewCodeBT" title="xin lỗi chức năng chưa hoàn thành">Mini Code</button>
         </div>
-
     </header>
+    <img src="img/stitch.png" id="Stitch" alt="" title="Stich">
 
     <!-- thêm vai cái chức năng cho trang web nào-->
     <!-- khu vuc sang tao :D -->
-    <div id="body">
-        <div id="coding">              
+    <div id="ViewCode">
+        <style>
+            #testPlush{
+                display: flex;
+            }
+            #caigiday{
+                width: 100%;
+                height: 300px;
+                background-color: blue;
+                transition-duration: 1s;
+            }
+            #daysang{
+                width: 0%;
+                height: 300px;
+                background-color: purple;
+                transition-duration: 1s;
+            }
+        </style>
+        <div id="coding">
+            <article onclick="testPlush(this)" id="testPlush">
+                <div id="caigiday"></div>
+                <div id="daysang"></div>
+            </article>
+           
         </div>
-        <div id="source code">        
+        <div id="sourceCode">
         </div>
+        <script>
+            function testPlush(a){
+                document.getElementById("daysang").style.width= a.offsetWidth*30/100+"px";
+                document.getElementById("caigiday").style.width="70%";
+            }
+        </script>
     </div>
-    
+
 
     <button class="displaybar" id="visiblebar" onclick="visible()"><i class="fa fa-chevron-left"></i></button>
     <button class="displaybar" id="invisiblebar" style="display: none;right: 255px;" onclick="invisible()"><i
@@ -56,11 +92,12 @@
             <button id="startGameSSP">Chơi</button>
             <div id="Choice">
             </div>
-            <script src="gameSSP.js"></script>            
+            <script src="gameSSP.js"></script>
         </article>
 
         <article id="bubble">
-            <img src="img\article\historia.jpg" onmouseover="setupBubbleHead()" class="leftrotate" ontransitionend="lac_lac()">
+            <img src="img\article\historia.jpg" onmouseover="setupBubbleHead()" class="leftrotate"
+                ontransitionend="lac_lac()">
         </article>
 
 

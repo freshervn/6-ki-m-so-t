@@ -35,29 +35,4 @@
     border-radius: 8px;
 }
 
-#done{
-    height: 100%;
-    width: 0px;
-    position: fixed;
-    right: 0;
-    top: 60px;
-    overflow:  scroll;
-    align-content: center;
-    overflow: scroll;
-    transition: 0.5s;
-}
-#done article{
-    width: 250px;
-    height: 250px;
-}
-#done::-webkit-scrollbar{
-    display: none;
-}
-#done h1{
-    color: green;
-}
-#done #sanPham{
-    top: 30;
-    left: 0;    
-}
 
