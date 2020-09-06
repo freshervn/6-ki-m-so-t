@@ -8,3 +8,8 @@ function lac_lac(){
     }
     else i2.className="leftrotate";
 }
+// push
+function testPlush(a) {
+    document.getElementById("daysang").style.width = a.offsetWidth * 30 / 100 + "px";
+    document.getElementById("caigiday").style.width = "70%";
+}

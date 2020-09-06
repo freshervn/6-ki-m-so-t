@@ -34,19 +34,49 @@ header h2{
 }
 
 /* stich */
+#dithamquan h1{
+  position: relative;
+  background: none;
+  width: 60%;  
+  padding: 10px;
+  color: white;
+  font-size: 100%;
+}
 #Stitch{
+  position: relative;
+  width: 40%;
+  float: right;
+}
+#dithamquan{
+  background-color: green;
+  border-radius: 5px;
   position: fixed;
-  width: 12%;
+  display: flex;
   z-index: 1;
+  width: 15%;
   bottom: 0;
+  right:0;
+  animation-name: Stitch;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 
+@keyframes Stitch{
+  from{}
+  to{transform: scale(1.1,1.1);}
+}
+
+/*  nhap nhay style */
+@keyframes NhapNhay{
+    from {opacity:.4}
+    to {opacity:1.0}
+}
 /* chế độ view code */
 
 #viewCode {
   width: 100%;
-  display: flex;
   padding-top: 4%;
+  display: flex;  
   justify-content: space-around;
   margin: 0;
   transition-duration: 1s;
@@ -59,6 +89,7 @@ header h2{
   border-radius: 10px;
   border: 1px solid blue;
   position: relative;
+  transition: 1s;
 }
 
 #coding {
@@ -67,6 +98,7 @@ header h2{
   background-color: white;
   position: relative;
   overflow: scroll;
+  transition: 1s;
 }
 
 #coding::-webkit-scrollbar {
@@ -125,5 +157,9 @@ header h2{
 .displaybar i{
   background-color: black;
   color: white; 
+}
+#viewCodeBT {
+  font-size: 2vw;
+  border-radius: 8px;
 }
 /* khu vuc xem code */
