@@ -41,72 +41,129 @@
 
     <!-- thêm vai cái chức năng cho trang web nào-->
     <!-- khu vuc sang tao :D -->
-
     <div id="ViewCode">
-        <style>
-            #dangNhap{       
-                width: 100%;         
-                height: 100%;
-                padding: 6%;
-                font-size: 100%;
-            }
-            #loginHeader{
-                display: flex; 
-                justify-content: space-between; 
-                width: 100%; 
-                height: 15%;
-            }           
-            #buttonDangKy{
-                font-size: 100%;
-                padding: 5%;
-            }
-            #formDangNhap{
-                width: 100%; 
-                height: 25%; 
-                display: flex;
-                flex-direction: column; 
-                justify-content: space-around;
-                margin-top: 15%;
-            }
-            #formDangNhap input{
-                padding: 4%;
-                margin: 4%;
-            }     
-            #loginSupport{
-                margin-top: 16%;
-                width: 100%;
-                height: 15%;
-                text-align: right;
-            }        
-            #loginSocial{                                
-                margin-top: 0% 15%;
-                height: 10%;
-                width: 100%;
-                display: flex; 
-                justify-content: space-between;
-            }
-            #loginSocial :nth-child(n){
-                padding: 1%;
-                font-size: 100%;
-                font-weight: 10%;
-            }                  
-            .fa-google {
-            background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            }         
+        <style>       
+        .biglogo{
+            width: 100%;    
+            display: flex;
+        }            
+        .biglogo_imgLogo{
+            width: 45%;
+            margin: auto;
+        }
+
+        .search{
+            margin: auto;
+            border: 1px solid var(--theme);
+            border-radius: 3px;
+            width: 84%;
+            margin-top: 5%;
+            height: 10%;    
+            padding: 0.2em;
+            display: flex;
+            align-items: center;
+        }
+        .search_input{
+            flex: 1;
+            border: none;
+            outline: none;
+        }
+        
+        .ngan{
+            background-color: var(--theme);
+            height: 30px;
+            width: 1px;
+            opacity: 0.8;
+            margin: 3px;
+        } 
+        .search_funtionce{
+            margin: 3px;
+            display: inline-block;  
+            position: relative;
+        }
+        .timkiem_icon{         
+            margin: 3px;
+            background-color: var(--theme);
+            color: var(--theme-text);
+            width: 50px;
+            height: 40px;
+            position: relative;
+        }
+        .search_funtionce_select{
+            position: relative;
+        }       
+        .search_funtionce_option{
+            position: absolute;
+            top:100%;
+            right: 0;
+            list-style-type: none;
+            width: 130px;
+            box-shadow: 0 0 3px #CCC;
+            padding: 0;            
+            display: none;
+            transition-duration: 1s;
+        }
+        .search_funtionce_option_item{
+            padding: 3px;
+        }       
+        .search_funtionce_option_item span{
+            margin: 4px;
+            font-size: 14px;    
+            text-align: left;            
+        }
+        .search_funtionce_option_item i{
+            float: right;
+            margin: 0 4px 0 12px;
+            color: var(--theme);
+            display: none;
+        }
+        .search_funtionce_option_onactive i{
+            display: inline-block;
+        }
+        .search_funtionce:hover .search_funtionce_option{
+            display: block;            
+        }
+        .search_funtionce_select::after{
+            content: "";
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 20px;
+            top: 100%;
+        }
         </style>
         <div id="coding">
-            <!-- tao khung dang nhap nao -->
-           
+            <!-- tim kiem -->
+        <article id="timKiem">
+            <div class="bigLogo">
+                <img class="bigLogo_imgLogo" src="img/stitchTuyenDung.png" alt="">   
+            </div>
+            
+            <div class="search">
+                <input class="search_input" type="text" value="" placeholder="Tra cứu code">                
+                <div class="ngan"></div>
+                <div class="search_funtionce">
+                    <span class="search_funtionce_select" >
+                        Danh mục<i style=" margin: 4px; font-weight: bold;" class="fa fa-angle-down"></i>
+                    </span>
+                    <ul class="search_funtionce_option" >
+                        <li class="search_funtionce_option_item search_funtionce_option_onactive"> <span>HTMl</span>  <i class="fa fa-check"></i></li>
+                        <li class="search_funtionce_option_item"><span>CSS</span>  <i class="fa fa-check"></i></li>
+                        <li class="search_funtionce_option_item search_funtionce_option_onactive"> <span>JS</span>  <i class="fa fa-check"></i></li>
+                    </ul>
+                </div>
+               
+                <button class="timkiem_icon"> 
+                <i class="fa fa-search"></i>
+                </button> 
+            </div>  
+        </article>        
+
         </div>   
- 
-        <script>
-            var btlogin=document.getElementById("login");
-        </script>
         <div id="sourceCode">
         </div>
     </div>
+
     <button class="displaybar" id="visiblebar" onclick="visible()"><i class="fa fa-chevron-left"></i></button>
     <button class="displaybar" id="invisiblebar" style="display: none;right: 255px;" onclick="invisible()"><i
             class="fa fa-chevron-right"></i></button>
