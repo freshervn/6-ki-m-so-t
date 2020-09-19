@@ -1,6 +1,6 @@
-.buttonblue{
-    background: blue;
-    opacity: 0.9;
+.buttonclassic{
+    background: var(--theme);
+    opacity: 1.0;
     border:none;
     border-radius: 5px;
     outline:none;
@@ -9,10 +9,9 @@
     font-size: 14px;
     color: white;
 }
-.buttonblue:hover
+.buttonclassic:hover
 {
-    opacity: 1.0;
-    color: red;
+    opacity: 0.8;
 }
 .X button {
     position: absolute;
@@ -31,7 +30,7 @@
     opacity: 1.0;
 }
 .buttonGreen{
-    background-color: green;
+    background-color: var(--theme);
     padding: 8px;    
     font-size: 100%;
     color: white;

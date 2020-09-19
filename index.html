@@ -41,13 +41,72 @@
 
     <!-- thêm vai cái chức năng cho trang web nào-->
     <!-- khu vuc sang tao :D -->
+
     <div id="ViewCode">
+        <style>
+            #dangNhap{       
+                width: 100%;         
+                height: 100%;
+                padding: 6%;
+                font-size: 100%;
+            }
+            #loginHeader{
+                display: flex; 
+                justify-content: space-between; 
+                width: 100%; 
+                height: 15%;
+            }           
+            #buttonDangKy{
+                font-size: 100%;
+                padding: 5%;
+            }
+            #formDangNhap{
+                width: 100%; 
+                height: 25%; 
+                display: flex;
+                flex-direction: column; 
+                justify-content: space-around;
+                margin-top: 15%;
+            }
+            #formDangNhap input{
+                padding: 4%;
+                margin: 4%;
+            }     
+            #loginSupport{
+                margin-top: 16%;
+                width: 100%;
+                height: 15%;
+                text-align: right;
+            }        
+            #loginSocial{                                
+                margin-top: 0% 15%;
+                height: 10%;
+                width: 100%;
+                display: flex; 
+                justify-content: space-between;
+            }
+            #loginSocial :nth-child(n){
+                padding: 1%;
+                font-size: 100%;
+                font-weight: 10%;
+            }                  
+            .fa-google {
+            background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            }         
+        </style>
         <div id="coding">
-        </div>
+            <!-- tao khung dang nhap nao -->
+           
+        </div>   
+ 
+        <script>
+            var btlogin=document.getElementById("login");
+        </script>
         <div id="sourceCode">
         </div>
     </div>
-
     <button class="displaybar" id="visiblebar" onclick="visible()"><i class="fa fa-chevron-left"></i></button>
     <button class="displaybar" id="invisiblebar" style="display: none;right: 255px;" onclick="invisible()"><i
             class="fa fa-chevron-right"></i></button>
@@ -57,6 +116,36 @@
         <h1> Sản phẩm( ấn 2 lần để phóng to nhá) </h1>
         <div id="sanPham"></div>
 
+        <article id="dangNhap">
+            <div id="loginHeader">                
+                <h3>ĐĂNG NHẬP</h3>
+                <button class="buttonclassic" id="buttonDangKy">ĐĂNG KÝ</button>  
+            </div>
+
+            <form id="formDangNhap" action="">
+                <input type="text" placeholder="Đăng Nhập">
+                <input type="password" placeholder="Password">   
+                <input type="submit" value="ĐĂNG NHẬP" class="buttonclassic">
+            </form>
+
+            <div id="loginSupport" >
+                <div style="float: left;">
+                <button>Quên mật khẩu</button>
+                <button>Cần trợ giúp</button>
+                </div>                    
+                <button class="buttonclassic" style="">Trở lại</button>  
+            </div>
+             
+            <div id="loginSocial">
+                <button>
+                    <i class="fa fa-facebook"></i> Kết nối với Facebook  
+                </button>                                                
+                <button>
+                    <i class="fa fa-google"></i> Kết nối với Google 
+                </button>     
+            </div>                              
+    </article>
+ 
         <!-- day sang muot ma -->
         <article onclick="testPlush(this)" id="testPlush">
             <h1>Ấn 1 lần để test hiẹu ứng đẩy</h1>
@@ -67,7 +156,7 @@
         <!-- game giai tri -->
         <article id="KeoBuaBao">
             <h1 id="h1KeoBuaBao"> Kéo đá giấy </h1>
-            <button id="startGameSSP">Chơi</button>
+            <button class="buttonclassic" id="startGameSSP">Chơi</button>
             <div id="Choice">
             </div>
             <script src="gameSSP.js"></script>
@@ -94,7 +183,7 @@
         </article>
 
         <!-- bop la nghe cua dan ong -->
-        <article class="Tạo vếu" id="Tạo vếu">
+        <!-- <article class="Tạo vếu" id="Tạo vếu">
             <h1>Tìm nút của đàn ông đi</h1>
             <img src="img/article/bóp.jpg" alt="bóp đi" usemap="#bop">
             <map name="bop">
@@ -102,19 +191,19 @@
                 <area shape="circle" coords="160,190,40" alt="vắt sữa :V" onclick="TạoAdjacentHTML()">
             </map>
             <script src="TạoVếu.js"></script>
-        </article>
+        </article> -->
 
         <!-- dich chuyen content -->
         <article class="di chuyển" id="di chuyển">
             <h1> Đưa article xuống cuối</h1>
-            <button class="buttonblue" onclick="dichuyenEllement()">Đẩy xuống</button>
+            <button class="buttonclassic" onclick="dichuyenEllement()">Đẩy xuống</button>
             <script src="Dichuyen.js"></script>
         </article>
 
         <!-- test ngay thang cua js thoi -->
         <article class="day" id="day">
             <h1>Date() trả về ngày tháng</h1>
-            <button class="buttonblue" title="ngay thang" onclick="day()">Date</button>
+            <button class="buttonclassic" title="ngay thang" onclick="day()">Date</button>
             <p style="position: absolute;top: 20% ;left: 5%;color: blue;" id="d">Ngày tháng ,giờ lúc này là:</p>
             <!--không thêm src bên trong tag script nếu ko code sẽ ko chạy-->
             <script>
