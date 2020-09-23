@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bùi Đạt CV</title>
     <link rel="icon" href="img/ImgTitle.png" type="image/x-icon?" />
     <link rel="stylesheet" href="body.css">
-    <link rel="stylesheet" href="more.css">
     <link rel="stylesheet" href="button.css">
     <link rel="stylesheet" href="Menu.css">
     <link rel="stylesheet" href="bangmau.css">
@@ -15,232 +13,182 @@
     <link rel="stylesheet" href="done.css">
     <link rel="stylesheet" href="nextSlides.css">
     <link rel="stylesheet" href="gameSSP.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ALL.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" media="screen and (max-width: 1000px)" href="tablet.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="phone.css">
+    <title>Bùi Đạt CV</title>
 </head>
 </head>
 
 <body>
-
-    <header>
-        <h2>Bùi Thành Đạt ( Hire me, please! )</h2>
-        <h2></h2>
-        <div class="rightside">
-            <button onclick="window.location.href='https://www.facebook.com/';" href="https://www.facebook.com/"><i
-                    class="fa fa-facebook"></i></button>
-            <button onclick="alert('Số điện thoại của mình là: 0335950936')"><i class="fa fa-phone"></i></button>
-            <button id="viewCodeBT" title="xin lỗi chức năng chưa hoàn thành">Mini Code</button>
+    <!-- header -->
+    <header class=" col-12 ">
+        <div class="col-3 col-6-m col-4-t" id="header__div__home__pages">
+            <h1> BUI DAT PAGE'S</h1>
         </div>
+        <!--     chức năng xem code   
+            <div class="rightside">
+            <a id="viewCodeBT" title="xin lỗi chức năng chưa hoàn thành" onclick="chuahoanthanh()">
+                Mini Code
+            </a>
+        </div> -->
     </header>
 
-    <!-- stitch cute -->
-    <div id=dithamquan>
-        <h1 id="dithamquan">Tham quan</h1>
-        <img src="img/stitch.png" id="Stitch" alt="Stitch">
+    <div class="body col-12 col-12-m col-12-t grid__row">
+        <!-- trinh chieu code -->
+        <div class="done col-12">
+            <aside class="Showcode col-2 col-4-t col-0-m" ></aside>
+            <article class=" col-8 col-12-m col-8-t maindone">
+                <button class="btn btn-displaybar " onclick="visible()"><i class="fa fa-chevron-left"></i></button>
+                <div class="windownAchive" style="display: flex; justify-content: space-around; position: relative;">
+                </div>
+                <button class="btn btn-displaybar " onclick="invisible()"><i class="fa fa-chevron-right"></i></button>
+            </article>
+            <aside class="decription col-2 col-4-t col-0-m"></aside>
+        </div>
+
+        <div class="ALL col-12 col-12-m grid__row">
+
+            <article></article>
+            <article></article>
+            <article></article>
+            <article></article>
+            <article id="timKiem">
+                <div class="bigLogo">
+                    <img class="bigLogo_imgLogo" src="img/stitchTuyenDung.png" alt="">
+                </div>
+
+                <div class="search">
+                    <input class="search_input" type="text" value="" placeholder="Tra cứu code">
+                    <div class="ngan"></div>
+                    <div class="search_funtionce">
+                        <span class="search_funtionce_select">
+                            Danh mục<i style=" margin: 4px; font-weight: bold;" class="fa fa-angle-down"></i>
+                        </span>
+                        <ul class="search_funtionce_option">
+                            <li class="search_funtionce_option_item search_funtionce_option_onactive"> <span>HTMl</span>
+                                <i class="fa fa-check"></i></li>
+                            <li class="search_funtionce_option_item"><span>CSS</span> <i class="fa fa-check"></i></li>
+                            <li class="search_funtionce_option_item search_funtionce_option_onactive"> <span>JS</span>
+                                <i class="fa fa-check"></i></li>
+                        </ul>
+                    </div>
+
+                    <button class="timkiem_icon">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </article>
+
+            <!-- game giai tri -->
+            <article id="KeoBuaBao">
+                <button class="buttonclassic" id="startGameSSP">Chơi</button>
+                <div id="Choice">
+                </div>
+                <script src="gameSSP.js"></script>
+            </article>
+
+            <article id="doimau">
+                <div class="bang">
+                    <button onclick="doimau('Đen')" style="font-size:24px" title="Chuyển sang màu đen"><i
+                            class="fa fa-home" style="color: black;"></i>
+                        <button onclick="doimau('Xanh')" style="font-size:24px" title="Chuyển sang màu xanh"><i
+                                class="fa fa-home" style="color: blue;"></i>
+                            <button onclick="doimau('Đỏ')" style="font-size:24px" title="Chuyển sang màu đỏ"><i
+                                    class="fa fa-home" style="color: red;"></i>
+                                <button onclick="doimau('Lục')" style="font-size:24px" title="Chuyển sang xanh Lục"><i
+                                        class="fa fa-home" style="color: green;"></i>
+                                    <button onclick="doimau('Vàng')" style="font-size:24px" title="Chuyển sang vàng"><i
+                                            class="fa fa-home" style="color: yellow;"></i>
+                                        <button onclick="doimau('Cam')" style="font-size:24px"
+                                            title="Chuyển sang cam"><i class="fa fa-home" style="color: orange;"></i>
+                                            <button onclick="doimau('Tím')" style="font-size:24px"
+                                                title="Chuyển sang màu tím"><i class="fa fa-home"
+                                                    style="color: purple;"></i>
+                </div>
+                <script src="doimau.js"></script>
+            </article>
+
+            <article id="nextSlide">
+                <div>
+                    <img class="poster" src="img/article/Aquaman.jpg" alt="man">
+                    <img class="poster" src="img/article/NowUSeeMe.jpg" alt="see">
+                    <img class="poster" src="img/article/theGreatestShowman.jpg" alt="magic">
+                </div>
+                <button onclick="smooth(-1)" class="nextSlide"> <i class="fa fa-arrow-left"></i></button>
+                <button onclick="smooth(1)" class="nextSlide"> <i class="fa fa-arrow-right"></i></button>
+                <script src="nextSlides.js">
+                </script>
+            </article>
+
+            <!-- lac lac de thuong -->
+            <article id="bubble">
+                <img src="img\article\historia.jpg" onmouseover="setupBubbleHead()" class="leftrotate"
+                    ontransitionend="lac_lac()">
+            </article>
+            <article></article>
+            <article></article>
+            <article></article>
+            
+            <script>
+                function nextSlide() {
+                    x = document.querySelectorAll(".slide");
+                    // đấy tất cả sang 1 bên.
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.transform = "translate(-50px,0)";
+                    }
+                    // giu vi tri cua tat ca                        
+
+                    // lấy cái đầu đẩy xuống cuối
+                    setTimeout(() => {
+                        for (i = 0; i < x.length; i++) {
+                            document.getElementsByClassName("windownAchive")[0].insertAdjacentElement("beforeend", x[0]);
+                            x[i].setAttribute("style", "width: 50px; height: 50px; transition: 1s; ");
+                        }
+                    }, 1000);
+                }
+            </script>
+        </div>
+        <script src="done.js"></script>
+        <script src="body.js"></script>
+
     </div>
+
+    <!-- stitch cute -->
+    <!-- <div id=dithamquan>
+            <h1>Tham quan</h1>
+            <img src="img/stitch.png" id="Stitch" alt="Stitch">
+        </div> -->
 
     <!-- thêm vai cái chức năng cho trang web nào-->
-    <!-- khu vuc sang tao :D -->
-    <div id="ViewCode">
-        <style>       
-        .biglogo{
-            width: 100%;    
-            display: flex;
-        }            
-        .biglogo_imgLogo{
-            width: 45%;
-            margin: auto;
-        }
+    <!-- main code-->
 
-        .search{
-            margin: auto;
-            border: 1px solid var(--theme);
-            border-radius: 3px;
-            width: 84%;
-            margin-top: 5%;
-            height: 10%;    
-            padding: 0.2em;
-            display: flex;
-            align-items: center;
-        }
-        .search_input{
-            flex: 1;
-            border: none;
-            outline: none;
-        }
-        
-        .ngan{
-            background-color: var(--theme);
-            height: 30px;
-            width: 1px;
-            opacity: 0.8;
-            margin: 3px;
-        } 
-        .search_funtionce{
-            margin: 3px;
-            display: inline-block;  
-            position: relative;
-        }
-        .timkiem_icon{         
-            margin: 3px;
-            background-color: var(--theme);
-            color: var(--theme-text);
-            width: 50px;
-            height: 40px;
-            position: relative;
-        }
-        .search_funtionce_select{
-            position: relative;
-        }       
-        .search_funtionce_option{
-            position: absolute;
-            top:100%;
-            right: 0;
-            list-style-type: none;
-            width: 130px;
-            box-shadow: 0 0 3px #CCC;
-            padding: 0;            
-            display: none;
-            transition-duration: 1s;
-        }
-        .search_funtionce_option_item{
-            padding: 3px;
-        }       
-        .search_funtionce_option_item span{
-            margin: 4px;
-            font-size: 14px;    
-            text-align: left;            
-        }
-        .search_funtionce_option_item i{
-            float: right;
-            margin: 0 4px 0 12px;
-            color: var(--theme);
-            display: none;
-        }
-        .search_funtionce_option_onactive i{
-            display: inline-block;
-        }
-        .search_funtionce:hover .search_funtionce_option{
-            display: block;            
-        }
-        .search_funtionce_select::after{
-            content: "";
-            position: absolute;
-            display: block;
-            width: 100%;
-            height: 20px;
-            top: 100%;
-        }
-        </style>
-        <div id="coding">
-            <!-- tim kiem -->
-        <article id="timKiem">
-            <div class="bigLogo">
-                <img class="bigLogo_imgLogo" src="img/stitchTuyenDung.png" alt="">   
+    <!-- <div id="ViewCode">            
+            <div id="sourceCode">
             </div>
-            
-            <div class="search">
-                <input class="search_input" type="text" value="" placeholder="Tra cứu code">                
-                <div class="ngan"></div>
-                <div class="search_funtionce">
-                    <span class="search_funtionce_select" >
-                        Danh mục<i style=" margin: 4px; font-weight: bold;" class="fa fa-angle-down"></i>
-                    </span>
-                    <ul class="search_funtionce_option" >
-                        <li class="search_funtionce_option_item search_funtionce_option_onactive"> <span>HTMl</span>  <i class="fa fa-check"></i></li>
-                        <li class="search_funtionce_option_item"><span>CSS</span>  <i class="fa fa-check"></i></li>
-                        <li class="search_funtionce_option_item search_funtionce_option_onactive"> <span>JS</span>  <i class="fa fa-check"></i></li>
-                    </ul>
-                </div>
-               
-                <button class="timkiem_icon"> 
-                <i class="fa fa-search"></i>
-                </button> 
-            </div>  
-        </article>        
-
-        </div>   
-        <div id="sourceCode">
-        </div>
-    </div>
-
-    <button class="displaybar" id="visiblebar" onclick="visible()"><i class="fa fa-chevron-left"></i></button>
-    <button class="displaybar" id="invisiblebar" style="display: none;right: 255px;" onclick="invisible()"><i
-            class="fa fa-chevron-right"></i></button>
-
-    <aside id="done">
-
-        <h1> Sản phẩm( ấn 2 lần để phóng to nhá) </h1>
-        <div id="sanPham"></div>
-
-        <article id="dangNhap">
-            <div id="loginHeader">                
-                <h3>ĐĂNG NHẬP</h3>
-                <button class="buttonclassic" id="buttonDangKy">ĐĂNG KÝ</button>  
-            </div>
-
-            <form id="formDangNhap" action="">
-                <input type="text" placeholder="Đăng Nhập">
-                <input type="password" placeholder="Password">   
-                <input type="submit" value="ĐĂNG NHẬP" class="buttonclassic">
-            </form>
-
-            <div id="loginSupport" >
-                <div style="float: left;">
-                <button>Quên mật khẩu</button>
-                <button>Cần trợ giúp</button>
-                </div>                    
-                <button class="buttonclassic" style="">Trở lại</button>  
-            </div>
-             
-            <div id="loginSocial">
-                <button>
-                    <i class="fa fa-facebook"></i> Kết nối với Facebook  
-                </button>                                                
-                <button>
-                    <i class="fa fa-google"></i> Kết nối với Google 
-                </button>     
-            </div>                              
-    </article>
- 
-        <!-- day sang muot ma -->
-        <article onclick="testPlush(this)" id="testPlush">
-            <h1>Ấn 1 lần để test hiẹu ứng đẩy</h1>
-            <div id="caigiday"></div>
-            <div id="daysang"></div>
-        </article>
-
-        <!-- game giai tri -->
-        <article id="KeoBuaBao">
-            <h1 id="h1KeoBuaBao"> Kéo đá giấy </h1>
-            <button class="buttonclassic" id="startGameSSP">Chơi</button>
-            <div id="Choice">
-            </div>
-            <script src="gameSSP.js"></script>
-        </article>
-
-        <!-- lac lac de thuong -->
-        <article id="bubble">
-            <img src="img\article\historia.jpg" onmouseover="setupBubbleHead()" class="leftrotate"
-                ontransitionend="lac_lac()">
-        </article>
-
-        <!-- mot cai de quang cao -->
-        <article id="nextSlide">
-            <h1>Next Sildes</h1>
-            <div>
-                <img class="poster" src="img/article/Aquaman.jpg" alt="man">
-                <img class="poster" src="img/article/NowUSeeMe.jpg" alt="see">
-                <img class="poster" src="img/article/theGreatestShowman.jpg" alt="magic">
-            </div>
-            <button onclick="smooth(-1)" class="nextSlide"> <i class="fa fa-arrow-left"></i></button>
-            <button onclick="smooth(1)" class="nextSlide"> <i class="fa fa-arrow-right"></i></button>
-            <script src="nextSlides.js">
+            <script>
             </script>
-        </article>
+        </div> -->
 
-        <!-- bop la nghe cua dan ong -->
-        <!-- <article class="Tạo vếu" id="Tạo vếu">
+    <!-- 2 cai nut kha vo dung -->
+
+    <!-- oke bắt đầu buil lại từ đây -->
+
+    <!-- <h1> Sản phẩm( ấn 2 lần để phóng to nhá) </h1>
+             -->
+    <!-- <div id="sanPham"></div> -->
+
+    <!-- day sang muot ma -->
+    <!-- <article onclick="testPlush(this)" id="testPlush">
+                <h1>Ấn 1 lần để test hiẹu ứng đẩy</h1>
+                <div id="caigiday"></div>
+                <div id="daysang"></div>
+    </article> -->
+    <!-- mot cai de quang cao -->
+
+    <!-- bop la nghe cua dan ong -->
+    <!-- <article class="Tạo vếu" id="Tạo vếu">
             <h1>Tìm nút của đàn ông đi</h1>
             <img src="img/article/bóp.jpg" alt="bóp đi" usemap="#bop">
             <map name="bop">
@@ -250,73 +198,47 @@
             <script src="TạoVếu.js"></script>
         </article> -->
 
-        <!-- dich chuyen content -->
-        <article class="di chuyển" id="di chuyển">
-            <h1> Đưa article xuống cuối</h1>
-            <button class="buttonclassic" onclick="dichuyenEllement()">Đẩy xuống</button>
-            <script src="Dichuyen.js"></script>
-        </article>
+    <!-- dich chuyen content -->
+    <!-- <article class="di chuyển" id="di chuyển">
+                <h1> Đưa article xuống cuối</h1>
+                <button class="buttonclassic" onclick="dichuyenEllement()">Đẩy xuống</button>
+                <script src="Dichuyen.js"></script>
+    </article> -->
 
-        <!-- test ngay thang cua js thoi -->
-        <article class="day" id="day">
-            <h1>Date() trả về ngày tháng</h1>
-            <button class="buttonclassic" title="ngay thang" onclick="day()">Date</button>
-            <p style="position: absolute;top: 20% ;left: 5%;color: blue;" id="d">Ngày tháng ,giờ lúc này là:</p>
-            <!--không thêm src bên trong tag script nếu ko code sẽ ko chạy-->
-            <script>
-                function day() {
-                    document.getElementById("d").innerHTML = Date();
-                }
-            </script>
-        </article>
+    <!-- test ngay thang cua js thoi -->
+    <!-- <article class="day" id="day">
+                <h1>Date() trả về ngày tháng</h1>
+                <button class="buttonclassic" title="ngay thang" onclick="day()">Date</button>
+                <p style="position: absolute;top: 20% ;left: 5%;color: blue;" id="d">Ngày tháng ,giờ lúc này là:</p>
+                <script>
+                    function day() {
+                        document.getElementById("d").innerHTML = Date();
+                    }
+                </script>
+            </article> -->
 
-        <!-- test cai nut xoa -->
-        <article class="X" id="X">
-            <h1>Ân nút "X" Để ẩn ô này</h1>
-            <!-- co the doi cach tat bằng sua onclick thanh tat() -->
-            <button title="Nút tắt" onclick="this.parentNode.style.display='none'; "><i class="fa fa-window-close"
-                    style="font-size:48px;"></i></button>
-            <p id="demo"></p>
-            <script src="buttonX.js"></script>
-        </article>
+    <!-- test cai nut xoa -->
+    <!-- <article class="X" id="X">
+                <h1>Ân nút "X" Để ẩn ô này</h1>
+                <button title="Nút tắt" onclick="this.parentNode.style.display='none'; "><i class="fa fa-window-close"
+                        style="font-size:48px;"></i></button>
+                <p id="demo"></p>
+                <script src="buttonX.js"></script>
+            </article> -->
 
-        <!-- qua co ban  -->
-        <article class="menu" id="menu">
-            <h1> Chỏ chuột qua menu </h1>
-            <menu>
-                <h2 hover>Menu ẩn</h2>
-                <a href="https://www.youtube.com/watch?v=IcrbM1l_BoI">Wake me up</a>
-                <a href="https://www.youtube.com/watch?v=mWRsgZuwf_8"> Demon</a>
-                <a href="https://www.youtube.com/watch?v=LHCob76kigA">7 years</a>
-            </menu>
-        </article>
+    <!-- qua co ban  -->
+    <!-- <article class="menu" id="menu">
+                <h1> Chỏ chuột qua menu </h1>
+                <menu>
+                    <h2 hover>Menu ẩn</h2>
+                    <a href="https://www.youtube.com/watch?v=IcrbM1l_BoI">Wake me up</a>
+                    <a href="https://www.youtube.com/watch?v=mWRsgZuwf_8"> Demon</a>
+                    <a href="https://www.youtube.com/watch?v=LHCob76kigA">7 years</a>
+                </menu>
+            </article> -->
 
-        <!-- chang theme -->
-        <article id="doimau">
-            <h1> Đổi màu trang web</h1>
-            <div class="bang">
-                <button onclick="doimau('Đen')" style="font-size:24px" title="Chuyển sang màu đen"><i class="fa fa-home"
-                        style="color: black;"></i>
-                    <button onclick="doimau('Xanh')" style="font-size:24px" title="Chuyển sang màu xanh"><i
-                            class="fa fa-home" style="color: blue;"></i>
-                        <button onclick="doimau('Đỏ')" style="font-size:24px" title="Chuyển sang màu đỏ"><i
-                                class="fa fa-home" style="color: red;"></i>
-                            <button onclick="doimau('Lục')" style="font-size:24px" title="Chuyển sang xanh Lục"><i
-                                    class="fa fa-home" style="color: green;"></i>
-                                <button onclick="doimau('Vàng')" style="font-size:24px" title="Chuyển sang vàng"><i
-                                        class="fa fa-home" style="color: yellow;"></i>
-                                    <button onclick="doimau('Cam')" style="font-size:24px" title="Chuyển sang cam"><i
-                                            class="fa fa-home" style="color: orange;"></i>
-                                        <button onclick="doimau('Tím')" style="font-size:24px"
-                                            title="Chuyển sang màu tím"><i class="fa fa-home"
-                                                style="color: purple;"></i>
-            </div>
-            <script src="doimau.js"></script>
-        </article>
-    </aside>
-    <script src="done.js"></script>
-    </div>
-    <script src="body.js"></script>
+    <!-- chang theme -->
+
 </body>
 
 </html>

@@ -1,3 +1,12 @@
+button{
+    cursor: pointer;
+    color: var(--theme);
+    transition: 0.5s;
+    cursor: pointer;
+}
+button:hover{
+    filter: brightness(150%);
+}
 .buttonclassic{
     background: var(--theme);
     opacity: 1.0;

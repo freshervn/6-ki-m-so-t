@@ -1,0 +1,9 @@
+.ALL{
+    height: 150px;
+    margin-top: 26px;
+}
+.ALL article{
+    width: var(--col1);
+    height: var(--col1);
+    border: 1px solid;
+}

@@ -138,11 +138,10 @@ function helloPeople() {
 // chuc nang chua hoan thanh
 function chuahoanthanh() {
   let notDoneYet = document.createElement("div");
-  for (let i = 0; i < document.getElementsByTagName("body")[0].children.length; i++) {
-      document.getElementsByTagName("body")[0].children[i].style.display = "none";
-  }
+  // ẩn hêt nội dung trong web
+  
   document.body.appendChild(notDoneYet);
-  notDoneYet.setAttribute("style","position: fixed;top:0;left:0; width:100%;height:100%; text-align:center;");                
+  notDoneYet.setAttribute("style","position: fixed;top:0;left:0; width:100%;height:100%; text-align:center; background:black");                
   notDoneYet.id="notDoneYet";
 
   let imgNotDoneyet=document.createElement("img");
@@ -158,8 +157,5 @@ function chuahoanthanh() {
 
   fuckgoback.addEventListener("click",function(){
       notDoneYet.remove();
-      for (let i = 0; i < document.getElementsByTagName("body")[0].children.length; i++) {
-      document.getElementsByTagName("body")[0].children[i].style.display = "";
-      }
   });
 }

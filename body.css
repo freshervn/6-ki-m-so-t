@@ -1,171 +1,138 @@
-*{
-  box-sizing: inherit;
+:root {
+    --theme: green;
+    --theme_background: var(--theme);
+    --background: white;
+    --col1 : 8.33vw;
+    --col2 : 16.66vw;
+    --col3 : 25vw;
+    --col4 : 33.33vw;
+    --col5 : 41.66vw;
+    --col6 : 50vw;
+    --col7 : 58.33vw;
+    --col8 : 66.66vw;
+    --col9  : 75vw;
+    --col10 : 83.33vw;
+    --col11 : 91.66vw;
+    --col12 : 100vw;
 }
-:root{
-  --theme:black;
-  --theme-text:white;
+* {
+    box-sizing: inherit;
+    background-color: inherit;
+    color: inherit;
+    position: relative;
 }
-body {    
-    background-color: var(--theme);
-    margin: 0px;;
+
+body {
+    background-color: var(--background);
+    width: 100%;
+    color: var(--theme);
+    margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 0;
+    font-size: 1vw;
     box-sizing: border-box;
+    position: relative;
 }
+
 body::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
- /* cua header */
-header{
-  width: 100%;
-  height: 60px;
-  background-color: var(--theme);
-  overflow: hidden;
-  color:  white;
-}
-header h2{
-  float: left;
-  padding-left: 16px;
-}
-.rightside{
-  position: absolute;
-  left: 70%;
-}
-.rightside>button{
-  float: left;
-  font-size: 30px;
-  margin: 12px;
-  border-radius: 50%;
+[class*="col-"] {float: left;}
+.col-1 {width: 8.33vw !important; }
+.col-2 {width: 16.66vw !important;}
+.col-3 {width: 25vw  !important;}
+.col-4 {width: 33.33vw  !important;}
+.col-5 {width: 41.66vw  !important;}
+.col-6 {width: 50vw  !important;}
+.col-7 {width: 58.33vw  !important; }
+.col-8 {width: 66.66vw  !important;}
+.col-9 {width: 75vw  !important;}
+.col-10 {width: 83.33vw  !important;}
+.col-11 {width: 91.66vw  !important;}
+.col-12 {width: 100vw  !important;}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
 }
 
+
+/* cua header */
+
+header {
+    height: 80px;
+    border-bottom: 1px solid;
+}
+
+#header__div__home__pages {
+    height: 100%;
+    display: flex;
+}
+
+#header__div__home__pages h1 {
+    margin: auto;
+}
+
+.body {
+}
+
+
+/* done */
+
+.done {
+    height: 460px;
+    margin-top: 26px;
+    display: flex;
+    flex-wrap: nowrap;
+    /* chỉnh lại sau */
+    overflow-y: hidden;   
+    overflow-x: hidden;
+}
 /* stich */
-#dithamquan h1{
-  position: relative;
-  background: none;
-  width: 60%;  
-  padding: 10px;
-  color: white;
-  font-size: 100%;
-}
-#Stitch{
-  position: relative;
-  width: 40%;
-  float: right;
-}
-  #dithamquan{
-  background-color:var(--theme);
-  border-radius: 5px;
-  position: fixed;
-  display: flex;
-  z-index: 1;
-  width: 15%;
-  bottom: 0;
-  right:0;
-  animation-name: Stitch;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
+
+#dithamquan h1 {
+    position: relative;
+    background: none;
+    width: 60%;
+    padding: 10px;
+    color: white;
+    font-size: 100%;
 }
 
-@keyframes Stitch{
-  from{}
-  to{transform: scale(1.1,1.1);}
+#Stitch {
+    position: relative;
+    width: 40%;
+    float: right;
+}
+
+#dithamquan {
+    background-color: var(--theme);
+    border-radius: 5px;
+    position: fixed;
+    display: flex;
+    z-index: 1;
+    width: 15%;
+    bottom: 0;
+    right: 0;
+    animation-name: Stitch;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes Stitch {
+    from {}
+    to {
+        transform: scale(1.1, 1.1);
+    }
 }
 
 /*  nhap nhay style */
-@keyframes NhapNhay{
-    from {opacity:.4}
-    to {opacity:1.0}
-}
-/* chế độ view code */
 
-#viewCode {
-  width: 100%;
-  padding-top: 4%;
-  display: flex;  
-  justify-content: space-around;
-  margin: 0;
-  transition-duration: 1s;
+@keyframes NhapNhay {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1.0
+    }
 }
-
-#sourceCode {
-  width: 500px;
-  height: 500px;
-  left: 50px;
-  border-radius: 10px;
-  border: 1px solid blue;
-  position: relative;
-  transition: 1s;
-}
-
-#coding {
-  width: 500px;
-  height: 500px;
-  background-color: white;
-  position: relative;
-  overflow: scroll;
-  transition: 1s;
-}
-
-#coding::-webkit-scrollbar {
-  display: none;
-}
-
-#coding h1 {
-  position: absolute;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2vw;
-  padding: 8px 8px;
-  top: 75%;
-  left: 10%;
-  background-color: rgb(59, 197, 31);
-  display: block;
-  border-radius: 8px;
-}
-
-/* done */
-#done{
-  height: 100%;
-  width: 0px;
-  position: fixed;
-  right: 0;
-  top: 60px;
-  overflow:  scroll;
-  align-content: center;
-  overflow: scroll;
-  transition: 1s;
-}
-#done article{
-  width: 250px;
-  height: 250px;
-}
-#done::-webkit-scrollbar{
-  display: none;
-}
-#done h1{
-  color: var(--theme);
-}
-#done #sanPham{
-  top: 30;
-  left: 0;    
-}
-
-.displaybar {
-    font-size:60px;
-    background-color:black ;
-     border: none; 
-     outline:none; 
-     position: fixed;
-     right:0px;
-     top: 50%;
-     transition: 0.5s;
-}
-.displaybar i{
-  background-color: black;
-  color: white; 
-}
-#viewCodeBT {
-  font-size: 2vw;
-  border-radius: 8px;
-}
-/* khu vuc xem code */
