@@ -1,0 +1,19 @@
+body{font-size: 1.2vw;}
+header{height: 70px;}
+.col-0-t {width: 0  !important;}
+.col-1-t {width: 8.33vw  !important;}
+.col-2-t {width: 16.66vw  !important;}
+.col-3-t {width: 25vw  !important;}
+.col-4-t {width: 33.33vw  !important;}
+.col-5-t {width: 41.66vw  !important;}
+.col-6-t {width: 50vw  !important;}
+.col-7-t {width: 58.33vw  !important;}
+.col-8-t {width: 66.66vw  !important;}
+.col-9-t {width: 75vw  !important;}
+.col-10-t {width: 83.33vw  !important;}
+.col-11-t {width: 91.66vw  !important;}
+.col-12-t {width: 100vw  !important;}
+
+#done{height: 460px; width: 460px;}
+#windownAchive{height: 460px;width: 460px;}
+.btn-displaybar{display: none;}

@@ -1,0 +1,25 @@
+body {font-size: 2vw;}
+header {height: 50px;}
+.col-0-m {width: 0 !important;}
+.col-1-m {width: 8.33vw  !important;}
+.col-2-m {width: 16.66vw  !important;}
+.col-3-m {width: 25vw  !important;}
+.col-4-m {width: 33.33vw  !important;}
+.col-5-m {width: 41.66vw  !important;}
+.col-6-m {width: 50vw  !important;}
+.col-7-m {width: 58.33vw  !important;}
+.col-8-m {width: 66.66vw  !important;}
+.col-9-m {width: 75vw  !important;}
+.col-10-m {width: 83.33vw  !important;}
+.col-11-m {width: 91.66vw  !important;}
+.col-12-m {width: 100vw  !important;}
+.done {
+    height: 100vw;
+    width: 100vw;
+    margin: 0 0 0 0;
+    /* chỉnh lại sau */
+    overflow-y: scroll;   
+}
+.done article{
+    display: none;
+}
