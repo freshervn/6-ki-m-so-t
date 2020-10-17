@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/ImgTitle.png" type="image/x-icon?" />
+    <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="body.css">
+    <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="button.css">
     <link rel="stylesheet" href="Menu.css">
     <link rel="stylesheet" href="bangmau.css">
@@ -15,41 +17,54 @@
     <link rel="stylesheet" href="gameSSP.css">
     <link rel="stylesheet" href="ALL.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" media="screen and (max-width: 1000px)" href="tablet.css">
+    <link rel="stylesheet" media="screen and (max-width: 1024px)" href="tablet.css">
     <link rel="stylesheet" media="screen and (max-width: 600px)" href="phone.css">
     <title>Bùi Đạt CV</title>
 </head>
-</head>
+
+<header class=" col-12 ">
+    <div class="col-3 col-6-m col-4-t" id="header__div__home__pages">
+        <h1> BUI DAT PAGE'S</h1>
+    </div>
+    <!--     chức năng xem code   
+        <div class="rightside">
+        <a id="viewCodeBT" title="xin lỗi chức năng chưa hoàn thành" onclick="chuahoanthanh()">
+            Mini Code
+        </a>
+    </div> -->
+</header>
 
 <body>
     <!-- header -->
-    <header class=" col-12 ">
-        <div class="col-3 col-6-m col-4-t" id="header__div__home__pages">
-            <h1> BUI DAT PAGE'S</h1>
-        </div>
-        <!--     chức năng xem code   
-            <div class="rightside">
-            <a id="viewCodeBT" title="xin lỗi chức năng chưa hoàn thành" onclick="chuahoanthanh()">
-                Mini Code
-            </a>
-        </div> -->
-    </header>
-
     <div class="body col-12 col-12-m col-12-t grid__row">
         <!-- trinh chieu code -->
-        <div class="done col-12">
-            <aside class="Showcode col-2 col-4-t col-0-m" ></aside>
-            <article class=" col-8 col-12-m col-8-t maindone">
-                <button class="btn btn-displaybar " onclick="visible()"><i class="fa fa-chevron-left"></i></button>
-                <div class="windownAchive" style="display: flex; justify-content: space-around; position: relative;">
+        <div class="done col-12 col-8-t col-12-m">
+            <aside class="Showcode col-2 col-0-t col-0-m"></aside>
+            <article class=" col-8 col-8-t col-12-m maindone">
+                <!--
+                <button class="btn btn-displaybar col-0-t col-0-m" onclick="visible()"><i class="fa fa-chevron-left"></i></button>
+                <button class="btn btn-displaybar col-0-t col-0-m" onclick="invisible()"><i class="fa fa-chevron-right"></i></button> -->
+                <div class="windownAchive">
+<style>
+                        .btn {
+                        height: 80px;
+                        line-height: 80px;  
+                        width: 80px;  
+                        font-weight: bold;
+                        border-radius: 50%;
+                        background-color: #4CAF50;
+                        color: white;
+                        text-align: center;
+                        cursor: pointer;
+                      }
+</style>
+                      <button class="btn">+ <i class="fa fa-facebook"></i></button>
                 </div>
-                <button class="btn btn-displaybar " onclick="invisible()"><i class="fa fa-chevron-right"></i></button>
             </article>
-            <aside class="decription col-2 col-4-t col-0-m"></aside>
+            <aside class="decription col-2 col-0-t col-0-m"></aside>
         </div>
 
-        <div class="ALL col-12 col-12-m grid__row">
-
+        <div class="ALL col-10 col-12-m col-4-t grid__row">
             <article></article>
             <article></article>
             <article></article>
@@ -130,7 +145,7 @@
             <article></article>
             <article></article>
             <article></article>
-            
+
             <script>
                 function nextSlide() {
                     x = document.querySelectorAll(".slide");
@@ -154,6 +169,23 @@
         <script src="body.js"></script>
 
     </div>
+    <footer class="grid__row col-12 col-12-m col-12-t">
+        <div>
+            <h2>HTML</h2>
+        </div>
+        <div>
+            <h2>HTML</h2>
+        </div>
+        <div>
+            <h2>HTML</h2>
+        </div>
+        <div>
+            <h2>HTML</h2>
+        </div>
+        <div>
+            <h2>HTML</h2>
+        </div>
+    </footer>
 
     <!-- stitch cute -->
     <!-- <div id=dithamquan>
@@ -162,16 +194,6 @@
         </div> -->
 
     <!-- thêm vai cái chức năng cho trang web nào-->
-    <!-- main code-->
-
-    <!-- <div id="ViewCode">            
-            <div id="sourceCode">
-            </div>
-            <script>
-            </script>
-        </div> -->
-
-    <!-- 2 cai nut kha vo dung -->
 
     <!-- oke bắt đầu buil lại từ đây -->
 
