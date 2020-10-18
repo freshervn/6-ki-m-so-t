@@ -1,0 +1,117 @@
+:root{
+	--myblue2: #255784;
+	--myblue:#2196f3;
+	--myblue3:#031321;
+}
+.hoi-cua-toi{
+	height: 100vh;
+	position: relative;
+	background-image: radial-gradient(var(--myblue3),var(--myblue3) 95%);}
+	.hoi-cua-toi i{
+		position: absolute;
+		top:50%;
+		left: 50%;
+		font-size: 168px;
+		color: var(--myblue);
+		text-shadow: 0	 0 50px var(--myblue2);
+		border-radius: 50%;
+		transform: translate(-50%,-50%) scale(.8,.8);
+		transition-duration: .8s;
+		outline: none;
+	}
+	.hoi-cua-toi i:hover{
+		transform: scale(1,1) translate(-50%,-50%);
+		color: var(--myblue2);
+		background-color: var(--myblue); 
+		text-shadow: 0	 0 50px var(--myblue);
+		top:50%;
+		left: 50%;
+	}
+	.hoi-cua-toi i:active{
+		color: var(--myblue);
+		background-color: var(--myblue2); 
+		text-shadow: 0	 0 50px var(--myblue2);
+	}
+	
+	.hoi-cua-toi div.container{
+		position: absolute;
+		top:50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		display: none;
+	}
+	@keyframes topbottom {
+		from {top: -100%; left:15%}
+		to {top:0; left: 0%}
+	}
+	@keyframes bottomtop {
+		from {bottom: -100%; left: -15%}
+		to {bottom:0;left: 0;}
+	}
+	.hoi-cua-toi div.row{
+		height: 400px;
+		position: relative;
+	}
+
+	.hoi-cua-toi div.col{
+		padding:0;
+		height: 400px;
+		overflow: hidden;
+		background-position: center;
+		background-size: cover;
+		position: relative;
+		background-repeat: no-repeat;
+		animation-name: topbottom;
+		animation-duration: 2s;
+		transition-duration: 0.5s;
+	}
+	.hoi-cua-toi div.col:nth-child(odd){
+		animation-name: bottomtop;
+	}/*
+	.hoi-cua-toi div.col:hover{
+		transform: rotateY(360deg);
+		background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5));
+	}*/
+	.hoi-cua-toi div.col:focus{
+		animation-name: bottomtop;
+	}
+	.hoi-cua-toi div.row> div:nth-child(1):hover{
+		filter: drop-shadow(8px 8px 15px rgb(0,0,0)) drop-shadow(-8px -8px 15px rgb(0,0,0)) drop-shadow(-8px 8px 15px rgb(0,0,0)) drop-shadow(8px -8px 15px rgb(0,0,0));
+	}
+	.hoi-cua-toi div.row> div:nth-child(2):hover{
+		filter: drop-shadow(8px 8px 15px rgb(124, 10,2)) drop-shadow(-8px -8px 15px rgb(124, 10, 2)) drop-shadow(-8px 8px 15px rgb(124, 10, 2)) drop-shadow(8px -8px 15px rgb(124, 10, 2));
+	}
+	.hoi-cua-toi div.row> div:nth-child(3):hover{
+		filter: drop-shadow(8px 8px 15px rgb(0, 24, 249)) drop-shadow(-8px -8px 15px rgb(0, 24, 249)) drop-shadow(-8px 8px 15px rgb(0, 24, 249)) drop-shadow(8px -8px 15px rgb(0, 24, 249));
+	}
+	.hoi-cua-toi div.row> div:nth-child(4):hover{
+		filter: drop-shadow(8px 8px 15px rgb(11, 102, 35)) drop-shadow(-8px -8px 15px rgb(11, 102, 35)) drop-shadow(-8px 8px 15px rgb(11, 102, 35)) drop-shadow(8px -8px 15px rgb(11, 102, 35));
+	}
+		.hoi-cua-toi div.row> div:nth-child(5):hover{
+		filter: drop-shadow(8px 8px 15px rgb(204, 119, 34)) drop-shadow(-8px -8px 15px rgb(204, 119, 34)) drop-shadow(-8px 8px 15px rgb(204, 119, 34)) drop-shadow(8px -8px 15px rgb(204, 119, 34));
+	}
+	.hoi-cua-toi div.row> div:nth-child(n):active{
+		filter: none;
+	}
+	.hoi-cua-toi div.col section{
+		width: 100%;
+		height: 100%;
+		padding: 50%;
+		display: flex;
+  flex-direction: column;
+  align-items: center;
+		color: whitesmoke;
+		opacity: 0.0;
+		transition: .5s;
+	}
+	.hoi-cua-toi div.col section h1{
+		font-size: 40px;
+		text-shadow: 1px 1px 3px #d5d5d5;
+		cursor: pointer;
+	}
+	.hoi-cua-toi div.col section:hover{
+		opacity: 1;
+	}
+	.hoi-cua-toi div.col section:active{
+		opacity: 0;
+	}
