@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="VI">
 <!-- tao cai pagé cho ae -->
-<!-- tao nut play -->
 <!-- tạo hieu ung bay nhay !!!-->
 <!-- tạo chữ -->
-<!-- tạo ảnh -->
 <head>
 	<meta charset="UTF-8">
 	<title> Bầu trời nhiều mây</title>
@@ -58,12 +56,17 @@
 
 				</div>
 			</div>
+			<div class="text-center" id="text-center">
+				<h1 id="title">BẦU TRỜI NHIỀU MÂY VỚI KHẢ NĂNG</h1>
+				<h3 id="title2">có mưa</h3>
+			</div>
 		</article>
 
 		<script type="text/javascript">
 			function play(idbutton) {
 				document.getElementById(idbutton).style.display="none";
-				document.getElementById("hoi-cua-toi").style.display="block";
+				document.getElementById("text-center").style.display="block";
+				setTimeout(function(){document.getElementById("hoi-cua-toi").style.display="block";},1500)
 			}
 		</script>
 	</main>
