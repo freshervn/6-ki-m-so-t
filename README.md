@@ -1,1 +1,1 @@
-oke let code
+một cái trang lưu lại kỷ niệm code của mình :v.
