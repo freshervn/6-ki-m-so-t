@@ -1,0 +1,9 @@
+footer {
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+footer div{
+    border: 1px solid;
+    width: var(--col2);
+    text-align: center;
+}

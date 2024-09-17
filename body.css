@@ -30,7 +30,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1vw;
     box-sizing: border-box;
-    position: relative;
+    position: relative;    
 }
 
 body::-webkit-scrollbar {
@@ -53,7 +53,7 @@ body::-webkit-scrollbar {
 
 .grid__row {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap:wrap;
 }
 
 
@@ -74,6 +74,7 @@ header {
 }
 
 .body {
+    border: 1px solid ;
 }
 
 
@@ -85,8 +86,6 @@ header {
     display: flex;
     flex-wrap: nowrap;
     /* chỉnh lại sau */
-    overflow-y: hidden;   
-    overflow-x: hidden;
 }
 /* stich */
 
